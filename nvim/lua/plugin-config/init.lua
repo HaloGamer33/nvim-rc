@@ -1,0 +1,4 @@
+require("plugin-config.lazy")
+require("plugin-config.treesitter")
+require("plugin-config.lsp")
+require("plugin-config.neotree")

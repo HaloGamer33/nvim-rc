@@ -1,0 +1,4 @@
+[INFO  9/22/2023 4:44:00 AM] ...m-data/lazy/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=lua-language-server) {}
+[INFO  9/22/2023 4:44:04 AM] ...m-data/lazy/mason.nvim/lua/mason-core/installer/init.lua:245: Installation succeeded for Package(name=lua-language-server)
+[INFO  9/22/2023 2:46:55 PM] ...m-data/lazy/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=csharp-language-server) {}
+[INFO  9/22/2023 2:47:20 PM] ...m-data/lazy/mason.nvim/lua/mason-core/installer/init.lua:245: Installation succeeded for Package(name=csharp-language-server)

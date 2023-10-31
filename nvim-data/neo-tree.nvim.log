@@ -1,0 +1,303 @@
+[ERROR 10/30/2023 8:22:40 PM] ...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:705: Error opening file: vim/_editor.lua:406: nvim_exec2()..BufReadCmd Autocommands for "*.xlsx"..script C:\Program Files\Neovim\share\nvim\runtime\autoload\zip.vim, line 64: Vim(echoerr):Warning: NOT executing unzip from current directory!
+[INFO  10/30/2023 9:40:59 PM] ...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:232: Toggling hidden files: true
+[INFO  10/30/2023 9:41:13 PM] ...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:232: Toggling hidden files: false
+[ERROR 10/30/2023 9:45:08 PM] ...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:705: Error opening file: vim/_editor.lua:406: Keyboard interrupt
+[ERROR 10/30/2023 10:13:13 PM] ...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:705: Error opening file: vim/_editor.lua:406: nvim_exec2(): Vim(edit):E325: ATTENTION
+[ERROR 10/30/2023 10:26:10 PM] ...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:705: Error opening file: vim/_editor.lua:406: Keyboard interrupt
+[ERROR 10/30/2023 10:56:06 PM] ...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:705: Error opening file: vim/_editor.lua:406: nvim_exec2()..BufReadPost Autocommands for "*": Vim(append):Error executing lua callback: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: Error executing lua: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: nvim_exec2()..BufReadPost Autocommands for "*"..FileType Autocommands for "*": Vim(append):No C compiler found! "cc", "gcc", "clang", "cl", "zig" are not executable.
+stack traceback:
+	[C]: in function 'nvim_cmd'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30>
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
+stack traceback:
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
+[ERROR 10/30/2023 10:56:16 PM] ...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:705: Error opening file: vim/_editor.lua:406: nvim_exec2()..BufReadPost Autocommands for "*": Vim(append):Error executing lua callback: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: Error executing lua: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: nvim_exec2()..BufReadPost Autocommands for "*"..FileType Autocommands for "*": Vim(append):No C compiler found! "cc", "gcc", "clang", "cl", "zig" are not executable.
+stack traceback:
+	[C]: in function 'nvim_cmd'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30>
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
+stack traceback:
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
+[ERROR 10/30/2023 10:56:48 PM] ...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:705: Error opening file: vim/_editor.lua:406: nvim_exec2()..BufReadPost Autocommands for "*": Vim(append):Error executing lua callback: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: Error executing lua: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: nvim_exec2()..BufReadPost Autocommands for "*"..FileType Autocommands for "*": Vim(append):No C compiler found! "cc", "gcc", "clang", "cl", "zig" are not executable.
+stack traceback:
+	[C]: in function 'nvim_cmd'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30>
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
+stack traceback:
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
+[ERROR 10/30/2023 10:56:50 PM] ...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:705: Error opening file: vim/_editor.lua:406: nvim_exec2()..BufReadPost Autocommands for "*": Vim(append):Error executing lua callback: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: Error executing lua: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: nvim_exec2()..BufReadPost Autocommands for "*"..FileType Autocommands for "*": Vim(append):No C compiler found! "cc", "gcc", "clang", "cl", "zig" are not executable.
+stack traceback:
+	[C]: in function 'nvim_cmd'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30>
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
+stack traceback:
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
+[ERROR 10/30/2023 10:56:50 PM] ...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:705: Error opening file: vim/_editor.lua:406: nvim_exec2()..BufReadPost Autocommands for "*": Vim(append):Error executing lua callback: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: Error executing lua: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: nvim_exec2()..BufReadPost Autocommands for "*"..FileType Autocommands for "*": Vim(append):No C compiler found! "cc", "gcc", "clang", "cl", "zig" are not executable.
+stack traceback:
+	[C]: in function 'nvim_cmd'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30>
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
+stack traceback:
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
+[ERROR 10/30/2023 10:56:51 PM] ...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:705: Error opening file: vim/_editor.lua:406: nvim_exec2()..BufReadPost Autocommands for "*": Vim(append):Error executing lua callback: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: Error executing lua: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: nvim_exec2()..BufReadPost Autocommands for "*"..FileType Autocommands for "*": Vim(append):No C compiler found! "cc", "gcc", "clang", "cl", "zig" are not executable.
+stack traceback:
+	[C]: in function 'nvim_cmd'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30>
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
+stack traceback:
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
+[ERROR 10/30/2023 10:56:51 PM] ...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:705: Error opening file: vim/_editor.lua:406: nvim_exec2()..BufReadPost Autocommands for "*": Vim(append):Error executing lua callback: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: Error executing lua: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: nvim_exec2()..BufReadPost Autocommands for "*"..FileType Autocommands for "*": Vim(append):No C compiler found! "cc", "gcc", "clang", "cl", "zig" are not executable.
+stack traceback:
+	[C]: in function 'nvim_cmd'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30>
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
+stack traceback:
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
+[ERROR 10/30/2023 10:56:51 PM] ...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:705: Error opening file: vim/_editor.lua:406: nvim_exec2()..BufReadPost Autocommands for "*": Vim(append):Error executing lua callback: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: Error executing lua: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: nvim_exec2()..BufReadPost Autocommands for "*"..FileType Autocommands for "*": Vim(append):No C compiler found! "cc", "gcc", "clang", "cl", "zig" are not executable.
+stack traceback:
+	[C]: in function 'nvim_cmd'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30>
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
+stack traceback:
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
+[ERROR 10/30/2023 10:58:12 PM] ...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:705: Error opening file: vim/_editor.lua:406: nvim_exec2()..BufReadPost Autocommands for "*": Vim(append):Error executing lua callback: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: Error executing lua: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: nvim_exec2()..BufReadPost Autocommands for "*"..FileType Autocommands for "*": Vim(append):No C compiler found! "cc", "gcc", "clang", "cl", "zig" are not executable.
+stack traceback:
+	[C]: in function 'nvim_cmd'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30>
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
+stack traceback:
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
+[ERROR 10/30/2023 10:58:14 PM] ...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:705: Error opening file: vim/_editor.lua:406: nvim_exec2()..BufReadPost Autocommands for "*": Vim(append):Error executing lua callback: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: Error executing lua: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: nvim_exec2()..BufReadPost Autocommands for "*"..FileType Autocommands for "*": Vim(append):No C compiler found! "cc", "gcc", "clang", "cl", "zig" are not executable.
+stack traceback:
+	[C]: in function 'nvim_cmd'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30>
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
+stack traceback:
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
+[ERROR 10/30/2023 10:58:14 PM] ...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:705: Error opening file: vim/_editor.lua:406: nvim_exec2()..BufReadPost Autocommands for "*": Vim(append):Error executing lua callback: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: Error executing lua: C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: nvim_exec2()..BufReadPost Autocommands for "*"..FileType Autocommands for "*": Vim(append):No C compiler found! "cc", "gcc", "clang", "cl", "zig" are not executable.
+stack traceback:
+	[C]: in function 'nvim_cmd'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:31: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30>
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
+stack traceback:
+	[C]: in function 'nvim_buf_call'
+	C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:30: in function <C:/Program Files/Neovim/share/nvim/runtime/filetype.lua:10>
+	[C]: in function 'nvim_exec2'
+	vim/_editor.lua:406: in function <vim/_editor.lua:402>
+	[C]: in function 'pcall'
+	...nvim-data/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:697: in function 'open_file'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:700: in function 'open'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:731: in function 'open_with_cmd'
+	...y/neo-tree.nvim/lua/neo-tree/sources/common/commands.lua:740: in function 'open'
+	...o-tree.nvim/lua/neo-tree/sources/filesystem/commands.lua:184: in function 'open'
+	...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:5: in function <...Gamer33/AppData/Local/nvim/lua/plugin-config/neotree.lua:4>
