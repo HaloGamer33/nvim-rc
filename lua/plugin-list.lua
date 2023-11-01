@@ -27,5 +27,9 @@ Plugins = {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
+    {
+        'barrett-ruth/live-server.nvim',
+        build = 'yarn global add live-server',
+        config = true
+    },
 }
-

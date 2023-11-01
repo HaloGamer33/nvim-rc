@@ -1,5 +1,14 @@
 require("mason").setup()
-require("mason-lspconfig").setup()
+require("mason-lspconfig").setup {
+    ensure_installed = {
+        "lua_ls",
+        "html",
+        "csharp_ls",
+        "cssls",
+        "gopls",
+        "rust_analyzer",
+    }
+}
 
 require("lspconfig").lua_ls.setup {
     settings = {
@@ -11,7 +20,7 @@ require("lspconfig").lua_ls.setup {
         },
     },
 }
-require("lspconfig").cssharp_ls.setup {}
+require("lspconfig").csharp_ls.setup {}
 require("lspconfig").cssls.setup {}
 require("lspconfig").gopls.setup {}
 require("lspconfig").html.setup {}
