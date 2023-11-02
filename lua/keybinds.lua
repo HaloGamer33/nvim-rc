@@ -20,3 +20,5 @@ set('n', '<m-j>', '<cmd>BufferPrevious<cr>')
 set('n', '<m-k>', '<cmd>BufferNext<cr>')
 -- Bind 'alt + w' to close tab
 set('n', '<m-w>', '<cmd>BufferClose<cr>')
+-- Open Live Server with ctrl + 0
+set('n', '<C-0>', '<cmd>HG33LiveServer<cr>')
