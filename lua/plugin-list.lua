@@ -5,6 +5,17 @@ Plugins = {
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
     "folke/tokyonight.nvim",
+    "hrsh7th/nvim-cmp",
+    "hrsh7th/cmp-nvim-lsp",
+    "saadparwaiz1/cmp_luasnip",
+    "rafamadriz/friendly-snippets",
+    {
+	"L3MON4D3/LuaSnip",
+	-- follow latest release.
+	version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+	-- install jsregexp (optional!).
+	build = "make install_jsregexp"
+    },
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",

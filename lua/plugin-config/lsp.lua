@@ -10,6 +10,8 @@ require("mason-lspconfig").setup {
     }
 }
 
+local capabilites = require("cmp_nvim_lsp").default_capabilities()
+
 require("lspconfig").lua_ls.setup {
     settings = {
         Lua = {
@@ -20,8 +22,18 @@ require("lspconfig").lua_ls.setup {
         },
     },
 }
-require("lspconfig").csharp_ls.setup {}
-require("lspconfig").cssls.setup {}
-require("lspconfig").gopls.setup {}
-require("lspconfig").html.setup {}
-require("lspconfig").pylsp.setup {}
+require("lspconfig").csharp_ls.setup {
+    capabilites = capabilites,
+}
+require("lspconfig").cssls.setup {
+    capabilites = capabilites,
+}
+require("lspconfig").gopls.setup {
+    capabilites = capabilites,
+}
+require("lspconfig").html.setup {
+    capabilites = capabilites,
+}
+require("lspconfig").pylsp.setup {
+    capabilites = capabilites,
+}
