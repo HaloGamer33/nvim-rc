@@ -20,5 +20,6 @@ vim.api.nvim_create_user_command('HelpHG33',
     end,
     { nargs = 1 })
 
--- better version of whats above, doesnt break and just maximices the window.
-vim.cmd('command! -nargs=* H :help <args> | only')
+-- Better version of whats above, doesnt break and just maximices the window.
+vim.cmd('command! -nargs=* -complete=help H :help <args> | only')
+

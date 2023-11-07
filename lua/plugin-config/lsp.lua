@@ -7,12 +7,14 @@ require("mason-lspconfig").setup {
         "cssls",
         "gopls",
         "rust_analyzer",
+        "pyright",
     }
 }
 
 local capabilites = require("cmp_nvim_lsp").default_capabilities()
 
 require("lspconfig").lua_ls.setup {
+    capabilites = capabilites,
     settings = {
         Lua = {
             diagnostics = {
@@ -34,6 +36,6 @@ require("lspconfig").gopls.setup {
 require("lspconfig").html.setup {
     capabilites = capabilites,
 }
-require("lspconfig").pylsp.setup {
+require("lspconfig").pyright.setup {
     capabilites = capabilites,
 }
