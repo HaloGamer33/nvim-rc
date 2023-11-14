@@ -1,4 +1,5 @@
 Plugins = {
+    "lervag/vimtex",
     "ThePrimeagen/vim-be-good",
     "nvim-treesitter/nvim-treesitter",
     "williamboman/mason.nvim",

@@ -39,3 +39,6 @@ require("lspconfig").html.setup {
 require("lspconfig").pyright.setup {
     capabilites = capabilites,
 }
+require("lspconfig").texlab.setup {
+    capabiliteis = capabilites,
+}
