@@ -2,7 +2,6 @@
 local set = vim.keymap.set
 
 -- Settings
-vim.opt.clipboard:append('unnamedplus')  -- Setting clipboard to be the same as Windows.
 vim.g.mapleader = ' '                    -- Mapping leader to space.
 
 set('i', '<C-H>', '<C-W>')                             -- 'ctrl + backspace' to delete whole word in insert mode.

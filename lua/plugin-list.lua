@@ -11,7 +11,6 @@ Plugins = {
     "saadparwaiz1/cmp_luasnip",
     "rafamadriz/friendly-snippets",
     "m4xshen/autoclose.nvim",
-    "aca/emmet-ls",
     {
 	"L3MON4D3/LuaSnip",
 	-- follow latest release.

@@ -1,5 +1,8 @@
+-- Base configuration
+require("settings")
+require("user-commands")
+require("keybinds")
+-- Plugin configuration
 require("plugin-list")
 require("plugin-config")
-require("settings")
-require("keybinds")
-require("user-commands")
+require("color-scheme")
