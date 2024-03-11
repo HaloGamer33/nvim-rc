@@ -5,6 +5,7 @@ Plugins = {
     "fladson/vim-kitty",
     "lambdalisue/suda.vim",
     "ThePrimeagen/vim-be-good",
+    "junegunn/vim-easy-align",
     {
         "iamcco/markdown-preview.nvim",
         cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
