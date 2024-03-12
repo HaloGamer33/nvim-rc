@@ -7,6 +7,7 @@ cmd('set shiftwidth=4 smarttab')
 cmd('set expandtab')
 cmd('set tabstop=8 softtabstop=0')
 cmd('set nowrap')
+cmd("language en_US")
 
 -- Clipboard
 -- vim.opt.clipboard:append('unnamedplus')  -- Setting clipboard to be the same as system clipboard.
