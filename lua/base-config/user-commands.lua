@@ -10,15 +10,15 @@
 -- )
 -- Help command that opens in a new tab.
 -- ( Honestly dont use it, doesnt work very good )
-vim.api.nvim_create_user_command('HelpHG33',
-    function(opts)
-        local name_of_help = opts.fargs[1]
-        vim.cmd('help ' .. name_of_help)
-        local path = vim.api.nvim_exec("echo expand('%:p')", true)
-        vim.cmd('quit')
-        vim.cmd('view ' .. path)
-    end,
-    { nargs = 1 })
+-- vim.api.nvim_create_user_command('HelpHG33',
+--     function(opts)
+--         local name_of_help = opts.fargs[1]
+--         vim.cmd('help ' .. name_of_help)
+--         local path = vim.api.nvim_exec("echo expand('%:p')", true)
+--         vim.cmd('quit')
+--         vim.cmd('view ' .. path)
+--     end,
+--     { nargs = 1 })
 
 -- Better version of whats above, doesnt break and just maximices the window.
 vim.cmd('command! -nargs=* -complete=help H :help <args> | only')
