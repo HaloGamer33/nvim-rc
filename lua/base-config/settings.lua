@@ -7,11 +7,14 @@ cmd("set shiftwidth=4 smarttab")
 cmd("set expandtab")
 cmd("set tabstop=8 softtabstop=0")
 cmd("set nowrap")
-cmd("language en_US")
+if vim.loop.os_uname().sysname == "Linux" then
+    cmd("language en_US.utf8")
+else
+    cmd("language en_US")
+end
 
 -- Clipboard
 -- vim.opt.clipboard:append("unnamedplus")  -- Setting clipboard to be the same as system clipboard.
-
 
 -- Highlighting yanked selection.
 vim.api.nvim_create_autocmd("TextYankPost", {
