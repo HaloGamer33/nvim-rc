@@ -7,6 +7,8 @@ Plugins = {
     "ThePrimeagen/vim-be-good",
     "junegunn/vim-easy-align",
     "xiyaowong/transparent.nvim",
+    "folke/twilight.nvim",
+    "koenverburg/peepsight.nvim",
     { "folke/neodev.nvim", opts = {} },
     {
         "iamcco/markdown-preview.nvim",
