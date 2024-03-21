@@ -17,7 +17,7 @@ set("v", "J", ":m '>+1<CR>gv=gv") -- "J" in visual mode will move selection down
 set("v", "n", "nzzzv") -- Centering cursor when searching - Visual Mode
 set("v", "N", "Nzzzv")
 
-set("n", "n", "nzz") -- Centering cursor when searching - Visual Mode
+set("n", "n", "nzz") -- Centering cursor when searching - Normal Mode
 set("n", "N", "Nzz")
 
 set({"n", "v"}, "<leader>y", '"+y')
