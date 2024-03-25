@@ -18,3 +18,4 @@ require'nvim-treesitter.configs'.setup {
 }
 
 vim.opt.smartindent = false
+require 'nvim-treesitter.install'.prefer_git = false
