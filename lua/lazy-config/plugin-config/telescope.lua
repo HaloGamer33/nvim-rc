@@ -2,7 +2,15 @@
 -- the loading is important
 require('telescope').setup {
     defaults = {
-        file_ignore_patterns = { "node_modules", },
+        file_ignore_patterns = {
+            "node_modules",
+            "venv",
+            "Platforms",
+            "Resources",
+            "obj",
+            "bin",
+            "__pycache__",
+        },
     },
     extensions = {
         fzf = {
