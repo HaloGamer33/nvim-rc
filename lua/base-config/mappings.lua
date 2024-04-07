@@ -20,6 +20,8 @@ set("v", "N", "Nzzzv")
 set("n", "n", "nzz") -- Centering cursor when searching - Normal Mode
 set("n", "N", "Nzz")
 
+-- Yanking and pasting into the system clipboard
 set({"n", "v"}, "<leader>y", '"+y')
+set({"n", "v"}, "<leader>p", '"+p')
 
 -- set("n", "<C-0>", "<cmd>HG33LiveServer<cr>") -- "ctrl + 0" to open LiveServer.
