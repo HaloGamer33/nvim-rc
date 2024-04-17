@@ -1,4 +1,5 @@
 Plugins = {
+    "chentoast/marks.nvim",
     "LudoPinelli/comment-box.nvim",
     "terrortylor/nvim-comment",
     "barrett-ruth/live-server.nvim",
