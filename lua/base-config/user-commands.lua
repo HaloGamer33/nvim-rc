@@ -23,3 +23,4 @@
 -- Better version of whats above, doesnt break and just maximices the window.
 vim.cmd('command! -nargs=* -complete=help H :help <args> | only')
 
+vim.cmd('command! Delmarks delm a-zA-Z0-9')
