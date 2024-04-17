@@ -28,3 +28,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 -- True Color
 cmd("set termguicolors")
+
+-- Turn off case sensitivity
+cmd("set ignorecase")
