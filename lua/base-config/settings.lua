@@ -12,6 +12,7 @@ if vim.loop.os_uname().sysname == "Linux" then
 else
     cmd("language en_US")
 end
+cmd("set scrolloff=999")
 
 -- Clipboard
 -- vim.opt.clipboard:append("unnamedplus")  -- Setting clipboard to be the same as system clipboard.
