@@ -1,5 +1,7 @@
 local cmd = vim.cmd
 
+cmd('set scrolloff=99')
+
 -- Line number & tabs
 vim.wo.relativenumber = true
 vim.wo.number = true
