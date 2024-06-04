@@ -1,6 +1,7 @@
 Plugins = {
     "chentoast/marks.nvim",
     "alec-gibson/nvim-tetris",
+    "Eandrju/cellular-automaton.nvim",
     "LudoPinelli/comment-box.nvim",
     "terrortylor/nvim-comment",
     "barrett-ruth/live-server.nvim",
