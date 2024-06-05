@@ -34,3 +34,6 @@ cmd("set termguicolors")
 
 -- Turn off case sensitivity
 cmd("set ignorecase")
+
+-- Always use unix instead of windows
+vim.o.fileformat = 'unix'
