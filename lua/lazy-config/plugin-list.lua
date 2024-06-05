@@ -1,29 +1,35 @@
 Plugins = {
-    "chentoast/marks.nvim",
-    "alec-gibson/nvim-tetris",
-    "Eandrju/cellular-automaton.nvim",
-    "LudoPinelli/comment-box.nvim",
-    "terrortylor/nvim-comment",
-    "barrett-ruth/live-server.nvim",
-    "fladson/vim-kitty",
-    "lambdalisue/suda.vim",
-    "ThePrimeagen/vim-be-good",
-    "junegunn/vim-easy-align",
-    "xiyaowong/transparent.nvim",
-    "folke/twilight.nvim",
-    "koenverburg/peepsight.nvim",
-    { "folke/neodev.nvim", opts = {} },
+    "chentoast/marks.nvim",            -- Better marks
+    "alec-gibson/nvim-tetris",         -- Tetris
+    "Eandrju/cellular-automaton.nvim", -- Text on buffer melts
+    "LudoPinelli/comment-box.nvim",    -- Comment boxes
+    "terrortylor/nvim-comment",        -- `gcc` to quickly comment
+    "barrett-ruth/live-server.nvim",   -- Live server
+    "fladson/vim-kitty",               -- Syntax highlighting for kitty terminal config files
+    "lambdalisue/suda.vim",            -- Write/Read as sudo
+    "ThePrimeagen/vim-be-good",        -- ThePrimeagen goated game
+    "junegunn/vim-easy-align",         -- Align based on characters
+    "xiyaowong/transparent.nvim",      -- Transparent backgrounds
+    "folke/twilight.nvim",             -- Focus on cursor dimming everything else
+    "koenverburg/peepsight.nvim",      -- Focus on cursor dimming everything else
+    "folke/neodev.nvim",               -- Make neovim's LSP recognize the Nvim API
+
+    -- Live Github-like markdown preview
     {
         "iamcco/markdown-preview.nvim",
         cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
         ft = { "markdown" },
         build = function() vim.fn["mkdp#util#install"]() end,
     },
+
+    -- Harpoon, do I need to say more?
     {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
         dependencies = { "nvim-lua/plenary.nvim" },
     },
+
+    -- It was supposed to be grammar help for comments and so, but its not working
     {
         "rhysd/vim-grammarous",
         dependencies = {
@@ -32,6 +38,8 @@ Plugins = {
             "kana/vim-operator-user",
         },
     },
+
+    -- File tree still trying it out
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
@@ -42,6 +50,8 @@ Plugins = {
             -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
         }
     },
+
+    -- The famous treesitter
     {
         "nvim-treesitter/nvim-treesitter",
         config = function()
@@ -58,14 +68,13 @@ Plugins = {
     "hrsh7th/nvim-cmp",
     {
         "L3MON4D3/LuaSnip",
-        -- follow latest release.
-        version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-        -- install jsregexp (optional!).
+        version = "v2.*",
+        -- install jsregexp (optional!)
         build = "make install_jsregexp"
     },
-    "hrsh7th/cmp-nvim-lsp", -- Makes lsp's sources for completion.
-    "saadparwaiz1/cmp_luasnip", -- Makes luasnips sources for completion.
-    "rafamadriz/friendly-snippets", -- Gives VSCode like Snipets in LuaSnip.
+    "hrsh7th/cmp-nvim-lsp",         -- Makes lsp's sources for completion
+    "saadparwaiz1/cmp_luasnip",     -- Makes luasnips sources for completion
+    "rafamadriz/friendly-snippets", -- Gives VSCode like Snipets in LuaSnip
 
     -- Telescope
     {
