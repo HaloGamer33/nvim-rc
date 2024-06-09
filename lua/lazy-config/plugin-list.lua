@@ -13,6 +13,7 @@ Plugins = {
     "folke/twilight.nvim",             -- Focus on cursor dimming everything else
     "koenverburg/peepsight.nvim",      -- Focus on cursor dimming everything else
     "folke/neodev.nvim",               -- Make neovim's LSP recognize the Nvim API
+    "nvimdev/indentmini.nvim",         -- Indent Lines
 
     -- Live Github-like markdown preview
     {
