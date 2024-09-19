@@ -1,4 +1,6 @@
 Plugins = {
+    "Aadv1k/gdoc.vim",                 -- Google Docs
+    "dstein64/vim-startuptime",        -- Startup Time
     "chentoast/marks.nvim",            -- Better marks
     "alec-gibson/nvim-tetris",         -- Tetris
     "Eandrju/cellular-automaton.nvim", -- Text on buffer melts
