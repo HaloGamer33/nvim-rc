@@ -37,3 +37,9 @@ cmd("set ignorecase")
 
 -- Always use unix instead of windows
 vim.o.fileformat = 'unix'
+
+-- Limit line length to 100 on markdown files
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
+    command = "setlocal textwidth=100"
+})
