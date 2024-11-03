@@ -43,3 +43,6 @@ vim.api.nvim_create_autocmd("FileType", {
     pattern = "markdown",
     command = "setlocal textwidth=100"
 })
+
+-- Wrap on words and not on charactes when 'set wrap'
+cmd("set linebreak")
