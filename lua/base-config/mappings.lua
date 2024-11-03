@@ -15,6 +15,10 @@ set("i", "<C-H>", "<C-W>") -- "ctrl + backspace" to delete whole word in insert 
 set("v", "K", ":m '<-2<CR>gv=gv") -- "K" in visual mode will move selection up
 set("v", "J", ":m '>+1<CR>gv=gv") -- "J" in visual mode will move selection down
 
+-- Use visual lines to move up and down
+set({"n", "v"}, "j", "gj")
+set({"n", "v"}, "k", "gk")
+
 set("v", "n", "nzzzv") -- Centering cursor when searching - Visual Mode
 set("v", "N", "Nzzzv")
 
