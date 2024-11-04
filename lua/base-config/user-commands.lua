@@ -24,3 +24,12 @@
 vim.cmd('command! -nargs=* -complete=help H :help <args> | only')
 
 vim.cmd('command! Delmarks delm a-zA-Z0-9')
+
+vim.api.nvim_create_user_command(
+    'Help',
+    function(args)
+        vim.cmd.help(args.args)
+        vim.cmd.only()
+    end,
+    {nargs = 1, complete = 'help'}
+)
