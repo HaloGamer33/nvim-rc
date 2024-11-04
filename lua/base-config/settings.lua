@@ -46,3 +46,5 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- Wrap on words and not on charactes when 'set wrap'
 cmd("set linebreak")
+
+cmd("set nowrapscan")
