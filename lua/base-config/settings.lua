@@ -1,20 +1,26 @@
 local cmd = vim.cmd
 
-cmd('set scrolloff=99')
+-- Line numbers
+vim.o.relativenumber = true
+vim.o.number = true
+-- Indentation
+vim.o.shiftwidth = 4       -- Use 4 spaces for indentation
+vim.o.smarttab = true      -- QOL for indentation
+vim.o.expandtab = true     -- Use spaces instead of tab characters
+-- Miscellaneous
+vim.o.wrap = false         -- Do not wrap lines that go over the screen
+vim.o.scrolloff = 99       -- Try to keep 99 lines above and below the cursor at all times (centers the cursor)
+vim.o.termguicolors = true -- Enable 24-bit RGB color in the TUI
+vim.o.ignorecase = true    -- Ignore case when searching
+vim.o.fileformat = 'unix'  -- Always use unix file format (end line character) instead of windows file format
+vim.o.linebreak = true     -- Wrap on words and not on charactes when 'set wrap'
+vim.o.wrapscan = false     -- Don't wrap the end of the document when searching
 
--- Line number & tabs
-vim.wo.relativenumber = true
-vim.wo.number = true
-cmd('set shiftwidth=4 smarttab')
-cmd('set expandtab')
-cmd('set tabstop=8 softtabstop=0')
-cmd('set nowrap')
 if vim.loop.os_uname().sysname == 'Linux' then
     cmd('language en_US.utf8')
 else
     cmd('language en_US')
 end
-cmd('set scrolloff=999')
 
 -- Clipboard
 -- vim.opt.clipboard:append('unnamedplus')  -- Setting clipboard to be the same as system clipboard.
@@ -29,22 +35,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- True Color
-cmd('set termguicolors')
-
--- Turn off case sensitivity
-cmd('set ignorecase')
-
--- Always use unix instead of windows
-vim.o.fileformat = 'unix'
-
 -- Limit line length to 100 on markdown files
 vim.api.nvim_create_autocmd('FileType', {
     pattern = 'markdown',
     command = 'setlocal textwidth=100'
 })
 
--- Wrap on words and not on charactes when 'set wrap'
-cmd('set linebreak')
-
-cmd('set nowrapscan')
