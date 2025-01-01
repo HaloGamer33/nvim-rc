@@ -8,27 +8,23 @@
 --     end,
 --     {}
 -- )
--- Help command that opens in a new tab.
--- ( Honestly dont use it, doesnt work very good )
--- vim.api.nvim_create_user_command('HelpHG33',
---     function(opts)
---         local name_of_help = opts.fargs[1]
---         vim.cmd('help ' .. name_of_help)
---         local path = vim.api.nvim_exec("echo expand('%:p')", true)
---         vim.cmd('quit')
---         vim.cmd('view ' .. path)
---     end,
---     { nargs = 1 })
-
--- Better version of whats above, doesnt break and just maximices the window.
-vim.cmd('command! -nargs=* -complete=help H :help <args> | only')
 
 vim.cmd('command! Delmarks delm a-zA-Z0-9')
 
 vim.api.nvim_create_user_command(
     'Help',
     function(args)
-        vim.cmd.help(args.args)
+        vim.cmd.tabnew()
+
+        -- Use pcall to catch errors when running vim.cmd.help
+        local success, err = pcall(vim.cmd.help, args.args)
+        if not success then
+            -- Handle the error, e.g., display an error message
+            vim.cmd.close() -- Close the tab if the help command fails
+            vim.api.nvim_err_writeln(err:sub(5))
+            return
+        end
+
         vim.cmd.only()
     end,
     {nargs = 1, complete = 'help'}
