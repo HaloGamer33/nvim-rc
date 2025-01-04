@@ -17,6 +17,8 @@ vim.o.linebreak = true     -- Wrap on words and not on charactes when 'set wrap'
 vim.o.wrapscan = false     -- Don't wrap the end of the document when searching
 vim.opt.iskeyword:remove('_')
 
+vim.o.formatoptions = 't,c,r,o,q,n,1,],j,p' -- See: Help formatoptions
+
 if vim.loop.os_uname().sysname == 'Linux' then
     cmd('language en_US.utf8')
 else
