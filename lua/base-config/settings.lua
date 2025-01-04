@@ -15,6 +15,7 @@ vim.o.ignorecase = true    -- Ignore case when searching
 vim.o.fileformat = 'unix'  -- Always use unix file format (end line character) instead of windows file format
 vim.o.linebreak = true     -- Wrap on words and not on charactes when 'set wrap'
 vim.o.wrapscan = false     -- Don't wrap the end of the document when searching
+vim.opt.iskeyword:remove('_')
 
 if vim.loop.os_uname().sysname == 'Linux' then
     cmd('language en_US.utf8')
@@ -40,4 +41,3 @@ vim.api.nvim_create_autocmd('FileType', {
     pattern = 'markdown',
     command = 'setlocal textwidth=100'
 })
-
