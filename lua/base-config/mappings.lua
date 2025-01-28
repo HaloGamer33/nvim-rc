@@ -4,7 +4,7 @@ local set = vim.keymap.set
 -- Settings
 vim.g.mapleader = " " -- Mapping leader to space.
 
-set("i", "<C-H>", "<C-W>") -- "ctrl + backspace" to delete whole word in insert mode.
+set({"i", "c"}, "<C-H>", "<C-W>") -- "ctrl + backspace" to delete whole word in insert mode.
 
 -- No longer necessary when using scrolloff setting
 -- set("n", "<C-j>", "<C-d>zz") -- Moving half page but keeping cursor center
