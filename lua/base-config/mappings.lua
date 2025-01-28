@@ -19,11 +19,11 @@ set("v", "J", ":m '>+1<CR>gv=gv") -- "J" in visual mode will move selection down
 set({"n", "v"}, "j", "gj")
 set({"n", "v"}, "k", "gk")
 
-set("v", "n", "nzzzv") -- Centering cursor when searching - Visual Mode
-set("v", "N", "Nzzzv")
+-- set("v", "n", "nzzzv") -- Centering cursor when searching - Visual Mode
+-- set("v", "N", "Nzzzv")
 
-set("n", "n", "nzz") -- Centering cursor when searching - Normal Mode
-set("n", "N", "Nzz")
+-- set("n", "n", "nzz") -- Centering cursor when searching - Normal Mode
+-- set("n", "N", "Nzz")
 
 -- Yanking and pasting into the system clipboard
 set({"n", "v"}, "<leader>y", '"+y')
