@@ -1,4 +1,12 @@
 Plugins = {
+    -- On trial
+    -- Dashboard
+    {
+        'goolord/alpha-nvim',
+        dependencies = { 'echasnovski/mini.icons' },
+    },
+    -- End of on trial plugins
+
     -- "Aadv1k/gdoc.vim",                 -- Google Docs
     "dstein64/vim-startuptime",        -- Startup Time
     "chentoast/marks.nvim",            -- Better marks
