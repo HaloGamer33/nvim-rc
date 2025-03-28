@@ -14,5 +14,5 @@ set({'n', 'v'}, 'j', 'gj')
 set({'n', 'v'}, 'k', 'gk')
 
 -- Yanking and pasting into/from the system clipboard
-set({'n', 'v'}, "<leader>y", '"+y')
-set({'n', 'v'}, "<leader>p", '"+p')
+set({'n', 'v'}, '<leader>y', '"+y')
+set({'n', 'v'}, '<leader>p', '"+p')
