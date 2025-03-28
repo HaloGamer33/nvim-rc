@@ -5,6 +5,22 @@ Plugins = {
         'goolord/alpha-nvim',
         dependencies = { 'echasnovski/mini.icons' },
     },
+    {
+        'vyfor/cord.nvim',
+        build = ':Cord update',
+        -- opts = {}
+    },
+    {
+        "folke/lazydev.nvim",
+        ft = "lua", -- only load on lua files
+        opts = {
+            library = {
+                -- See the configuration section for more details
+                -- Load luvit types when the `vim.uv` word is found
+                { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+            },
+        },
+    },
     -- End of on trial plugins
 
     -- "Aadv1k/gdoc.vim",                 -- Google Docs
@@ -22,7 +38,6 @@ Plugins = {
     "xiyaowong/transparent.nvim",      -- Transparent backgrounds
     "folke/twilight.nvim",             -- Focus on cursor dimming everything else
     "koenverburg/peepsight.nvim",      -- Focus on cursor dimming everything else
-    "folke/neodev.nvim",               -- Make neovim's LSP recognize the Nvim API
     "nvimdev/indentmini.nvim",         -- Indent Lines
 
     -- Live Github-like markdown preview
