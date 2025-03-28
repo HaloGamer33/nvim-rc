@@ -21,6 +21,13 @@ Plugins = {
             },
         },
     },
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        ---@module "ibl"
+        ---@type ibl.config
+        opts = {},
+    },
     -- End of on trial plugins
 
     -- "Aadv1k/gdoc.vim",                 -- Google Docs
@@ -38,7 +45,6 @@ Plugins = {
     "xiyaowong/transparent.nvim",      -- Transparent backgrounds
     "folke/twilight.nvim",             -- Focus on cursor dimming everything else
     "koenverburg/peepsight.nvim",      -- Focus on cursor dimming everything else
-    "nvimdev/indentmini.nvim",         -- Indent Lines
 
     -- Live Github-like markdown preview
     {
