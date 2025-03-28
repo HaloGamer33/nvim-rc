@@ -22,9 +22,9 @@ cmp.setup({
         -- { name = "nvim_lsp" },
         -- { name = "luasnip" },
     },
-    {
-        { name = "buffer" },
-    })
+        {
+            { name = "buffer" },
+        })
 })
 
 function Cmp_html_setup()
