@@ -1,14 +1,3 @@
--- My live server 
--- vim.api.nvim_create_user_command('LiveServerHG33',
---     function()
---         local directory = vim.fn.getcwd()
---         local command = "live-server " .. [["]] .. directory .. [["]]
---         print("Starting Live Server...")
---         vim.fn.jobstart(command)
---     end,
---     {}
--- )
-
 vim.cmd('command! Delmarks delm a-zA-Z0-9')
 
 vim.api.nvim_create_user_command(
