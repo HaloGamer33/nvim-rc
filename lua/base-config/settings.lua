@@ -19,14 +19,7 @@ vim.opt.iskeyword:remove('_')
 
 vim.o.formatoptions = 't,c,r,o,q,n,1,],j,p' -- See: Help formatoptions
 
-if vim.loop.os_uname().sysname == 'Linux' then
-    cmd('language en_US.utf8')
-else
-    cmd('language en_US')
-end
-
--- Clipboard
--- vim.opt.clipboard:append('unnamedplus')  -- Setting clipboard to be the same as system clipboard.
+cmd('language en_US.utf8')
 
 -- Highlighting yanked selection.
 vim.api.nvim_create_autocmd('TextYankPost', {
