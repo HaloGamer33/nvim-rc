@@ -31,6 +31,35 @@ Plugins = {
         end
     },
     {
+        'sbdchd/neoformat',
+        config = function ()
+            vim.g.neoformat_typescript_prettier = {
+                exe = "prettier",
+                args = {
+                    "--stdin-filepath",
+                    '"%:p"',
+                    "--tab-width",
+                    "4",
+                    "--single-quote",
+                    '--experimental-ternaries',
+                },
+                stdin = 1
+            }
+            vim.g.neoformat_javascript_prettier = {
+                exe = "prettier",
+                args = {
+                    "--stdin-filepath",
+                    '"%:p"',
+                    "--tab-width",
+                    "4",
+                    "--single-quote",
+                    '--experimental-ternaries',
+                },
+                stdin = 1
+            }
+        end
+    },
+    {
         'goolord/alpha-nvim',
         dependencies = { 'echasnovski/mini.icons' },
     },
