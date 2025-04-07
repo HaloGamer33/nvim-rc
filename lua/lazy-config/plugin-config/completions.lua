@@ -27,17 +27,17 @@ cmp.setup({
         })
 })
 
-function Cmp_html_setup()
-    cmp.setup({
-        sources = {
-            { name = "nvim_lsp" },
-            { name = "luasnip" },
-        },
-    })
-end
-
-vim.cmd.autocmd("FileType html lua Cmp_html_setup()")
--- vim.cmd([[autocmd FileType html lua Cmp_html_setup()]])
+vim.api.nvim_create_autocmd({"BufEnter"}, {
+    pattern = {"*.html", "*.lua"},
+    callback = function ()
+        cmp.setup({
+            sources = {
+                { name = "nvim_lsp" },
+                { name = "luasnip" },
+            },
+        })
+    end
+})
 
 -- Setup LuaSnip"s VSCode snipets
 require("luasnip.loaders.from_vscode").lazy_load()

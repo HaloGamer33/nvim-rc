@@ -35,10 +35,6 @@ require("mason-lspconfig").setup_handlers {
     end,
 }
 
-require("lspconfig").html.setup{
-    capabilities = capabilities
-}
-
 -- test
 local swift_lsp = vim.api.nvim_create_augroup("swift_lsp", { clear = true })
 vim.api.nvim_create_autocmd("FileType", {
