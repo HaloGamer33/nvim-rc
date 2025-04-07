@@ -60,6 +60,16 @@ Plugins = {
         end
     },
     {
+        "karb94/neoscroll.nvim",
+        config = function ()
+            require('neoscroll').setup{
+                hide_cursor = true,
+                duration_multiplier = 0.05,
+                easing = 'linear',
+            }
+        end
+    },
+    {
         'goolord/alpha-nvim',
         dependencies = { 'echasnovski/mini.icons' },
     },
