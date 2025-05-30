@@ -19,3 +19,6 @@ set({'n', 'v'}, '<leader>p', '"+p')
 
 -- Refactor with the help of the LSP.
 set('n', '<leader>rn', vim.lsp.buf.rename)
+
+set('n', '<M-C-K>', 'gt')
+set('n', '<M-C-J>', 'gT')
