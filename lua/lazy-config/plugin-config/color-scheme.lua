@@ -34,6 +34,5 @@ require("tokyonight").setup({
     on_highlights = function(highlights, colors) end,
 })
 
-vim.cmd.colorscheme("tokyonight")
-
-vim.opt.fillchars = { eob = " " }
+vim.cmd.colorscheme('tokyonight')
+-- vim.cmd.colorscheme('material-deep-ocean')

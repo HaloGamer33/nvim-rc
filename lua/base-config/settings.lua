@@ -17,6 +17,7 @@ vim.o.linebreak = true     -- Wrap on words and not on charactes when 'set wrap'
 vim.o.wrapscan = false     -- Don't wrap the end of the document when searching
 vim.o.colorcolumn = '80'   -- Column so that I keep my lines short
 vim.opt.iskeyword:remove('_')
+vim.opt.fillchars = { eob = " " }
 
 vim.o.formatoptions = 't,c,r,o,q,n,1,],j,p' -- See: Help formatoptions
 
