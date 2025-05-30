@@ -28,7 +28,7 @@ cmp.setup({
 })
 
 vim.api.nvim_create_autocmd({"BufEnter"}, {
-    pattern = {"*.html", "*.lua"},
+    pattern = {"*.html", "*.lua", "*.css"},
     callback = function ()
         cmp.setup({
             sources = {
