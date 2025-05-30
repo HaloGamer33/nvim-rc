@@ -237,4 +237,7 @@ Plugins = {
     "rebelot/kanagawa.nvim",
     "folke/tokyonight.nvim",
     "kepano/flexoki-neovim",
+    "EdenEast/nightfox.nvim",
+    "miikanissi/modus-themes.nvim",
+    "maxmx03/fluoromachine.nvim",
 }
