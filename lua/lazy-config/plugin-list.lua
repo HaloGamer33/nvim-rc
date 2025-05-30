@@ -2,8 +2,34 @@ Plugins = {
     -- On trial
     -- Dashboard
     -- lazy.nvim
+    -- {
+    --     "Pocco81/auto-save.nvim",
+    --     config = function ()
+    --         require('auto-save').setup()
+    --     end
+    -- },
+    -- 'marko-cerovac/material.nvim',
+    -- 'rafcamlet/nvim-luapad',
+    -- 'smithbm2316/centerpad.nvim',
+    "epwalsh/obsidian.nvim",
+    "barreiroleo/ltex_extra.nvim",
     {
-        'echasnovski/mini.move', version = false,
+        'shortcuts/no-neck-pain.nvim',
+        config = function ()
+            require("no-neck-pain").setup({
+                width = 80
+            })
+        end
+    },
+    {
+        "ahmedkhalf/project.nvim",
+        config = function()
+            require("project_nvim").setup { }
+        end
+    },
+    {
+        'echasnovski/mini.move',
+        version = false,
         config = function ()
             require('mini.move').setup({
                 -- Module mappings. Use `''` (empty string) to disable one.
@@ -30,21 +56,50 @@ Plugins = {
             )
         end
     },
-    {
-        "folke/noice.nvim",
-        event = "VeryLazy",
-        opts = {
-            -- add any options here
-        },
-        dependencies = {
-            -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-            "MunifTanjim/nui.nvim",
-            -- OPTIONAL:
-            --   `nvim-notify` is only needed, if you want to use the notification view.
-            --   If not available, we use `mini` as the fallback
-            "rcarriga/nvim-notify",
-        }
-    },
+    -- {
+    --     "folke/noice.nvim",
+    --     config = function ()
+    --         require("noice").setup({
+    --             lsp = {
+    --                 signature = {
+    --                     enabled = false,
+    --                 },
+    --             },
+
+    --             notify = {
+    --                 -- Noice can be used as `vim.notify` so you can route any notification like other messages
+    --                 -- Notification messages have their level and other properties set.
+    --                 -- event is always "notify" and kind can be any log level as a string
+    --                 -- The default routes will forward notifications to nvim-notify
+    --                 -- Benefit of using Noice for this is the routing and consistent history view
+    --                 enabled = false,
+    --             },
+
+    --             messages = {
+    --                 -- NOTE: If you enable messages, then the cmdline is enabled automatically.
+    --                 -- This is a current Neovim limitation.
+    --                 enabled = false, -- enables the Noice messages UI
+    --                 view = "notify", -- default view for messages
+    --                 view_error = "notify", -- view for errors
+    --                 view_warn = "notify", -- view for warnings
+    --                 view_history = "messages", -- view for :messages
+    --                 view_search = "virtualtext", -- view for search count messages. Set to `false` to disable
+    --             },
+    --         })
+    --     end,
+    --     event = "VeryLazy",
+    --     -- opts = {
+    --     --     -- add any options here
+    --     -- },
+    --     dependencies = {
+    --         -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+    --         "MunifTanjim/nui.nvim",
+    --         -- OPTIONAL:
+    --         --   `nvim-notify` is only needed, if you want to use the notification view.
+    --         --   If not available, we use `mini` as the fallback
+    --         "rcarriga/nvim-notify",
+    --     }
+    -- },
     {
         'sbdchd/neoformat',
         config = function ()
@@ -199,9 +254,9 @@ Plugins = {
     },
 
     -- Lsp
+    "neovim/nvim-lspconfig",
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
 
     -- Completion
     "hrsh7th/nvim-cmp",
