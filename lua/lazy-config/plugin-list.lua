@@ -11,8 +11,15 @@ Plugins = {
     -- 'marko-cerovac/material.nvim',
     -- 'rafcamlet/nvim-luapad',
     -- 'smithbm2316/centerpad.nvim',
+    'nyoom-engineering/oxocarbon.nvim',
     "epwalsh/obsidian.nvim",
     "barreiroleo/ltex_extra.nvim",
+    -- {
+    --     'norcalli/nvim-colorizer.lua',
+    --     config = function ()
+    --         require('colorizer').setup()
+    --     end
+    -- },
     {
         'shortcuts/no-neck-pain.nvim',
         config = function ()
@@ -21,12 +28,12 @@ Plugins = {
             })
         end
     },
-    {
-        "ahmedkhalf/project.nvim",
-        config = function()
-            require("project_nvim").setup { }
-        end
-    },
+    -- {
+    --     "ahmedkhalf/project.nvim",
+    --     config = function()
+    --         require("project_nvim").setup { }
+    --     end
+    -- },
     {
         'echasnovski/mini.move',
         version = false,
@@ -279,8 +286,8 @@ Plugins = {
         }
     },
     {
-        "nvim-telescope/telescope-fzf-native.nvim",
-        build = "make"
+        'nvim-telescope/telescope-fzf-native.nvim',
+        build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release'
     },
     -- Telescope file browser
     {
