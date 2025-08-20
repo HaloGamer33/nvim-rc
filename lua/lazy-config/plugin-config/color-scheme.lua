@@ -34,5 +34,4 @@ require("tokyonight").setup({
     on_highlights = function(highlights, colors) end,
 })
 
-vim.cmd.colorscheme('tokyonight')
--- vim.cmd.colorscheme('material-deep-ocean')
+vim.cmd.colorscheme('oxocarbon')
