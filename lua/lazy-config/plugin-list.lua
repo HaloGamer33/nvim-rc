@@ -11,6 +11,7 @@ Plugins = {
     -- 'marko-cerovac/material.nvim',
     -- 'rafcamlet/nvim-luapad',
     -- 'smithbm2316/centerpad.nvim',
+    'mbbill/undotree',
     'nyoom-engineering/oxocarbon.nvim',
     "epwalsh/obsidian.nvim",
     "barreiroleo/ltex_extra.nvim",
