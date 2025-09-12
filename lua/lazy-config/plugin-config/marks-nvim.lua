@@ -32,5 +32,15 @@ require'marks'.setup {
         -- defaults to false.
         annotate = false,
     },
-    mappings = {}
+    mappings = {
+        set = "ms",
+
+        delete = "md",
+
+        next = "mn",
+        prev = "mp",
+    }
 }
+
+-- Unbind `m` so it doesn't create marks.
+vim.keymap.set({'n', 'v'}, 'm', '<Nop>', { noremap = true, silent = true })
