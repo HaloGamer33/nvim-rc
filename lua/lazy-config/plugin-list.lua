@@ -1,20 +1,12 @@
 Plugins = {
     -- On trial
-    -- Dashboard
-    -- lazy.nvim
-    -- {
-    --     'Pocco81/auto-save.nvim',
-    --     config = function ()
-    --         require('auto-save').setup()
-    --     end
-    -- },
-    -- 'marko-cerovac/material.nvim',
-    -- 'rafcamlet/nvim-luapad',
-    -- 'smithbm2316/centerpad.nvim',
-    'mbbill/undotree',
-    'nyoom-engineering/oxocarbon.nvim',
-    'epwalsh/obsidian.nvim',
-    'barreiroleo/ltex_extra.nvim',
+    {
+        'barreiroleo/ltex_extra.nvim',
+        config = function()
+            require("socks-copypath").setup()
+        end,
+    },
+    'ohakutsu/socks-copypath.nvim',
     -- {
     --     'norcalli/nvim-colorizer.lua',
     --     config = function ()
@@ -29,12 +21,6 @@ Plugins = {
             })
         end
     },
-    -- {
-    --     'ahmedkhalf/project.nvim',
-    --     config = function()
-    --         require('project_nvim').setup { }
-    --     end
-    -- },
     {
         'echasnovski/mini.move',
         version = false,
@@ -64,50 +50,6 @@ Plugins = {
             )
         end
     },
-    -- {
-    --     'folke/noice.nvim',
-    --     config = function ()
-    --         require('noice').setup({
-    --             lsp = {
-    --                 signature = {
-    --                     enabled = false,
-    --                 },
-    --             },
-
-    --             notify = {
-    --                 -- Noice can be used as `vim.notify` so you can route any notification like other messages
-    --                 -- Notification messages have their level and other properties set.
-    --                 -- event is always 'notify' and kind can be any log level as a string
-    --                 -- The default routes will forward notifications to nvim-notify
-    --                 -- Benefit of using Noice for this is the routing and consistent history view
-    --                 enabled = false,
-    --             },
-
-    --             messages = {
-    --                 -- NOTE: If you enable messages, then the cmdline is enabled automatically.
-    --                 -- This is a current Neovim limitation.
-    --                 enabled = false, -- enables the Noice messages UI
-    --                 view = 'notify', -- default view for messages
-    --                 view_error = 'notify', -- view for errors
-    --                 view_warn = 'notify', -- view for warnings
-    --                 view_history = 'messages', -- view for :messages
-    --                 view_search = 'virtualtext', -- view for search count messages. Set to `false` to disable
-    --             },
-    --         })
-    --     end,
-    --     event = 'VeryLazy',
-    --     -- opts = {
-    --     --     -- add any options here
-    --     -- },
-    --     dependencies = {
-    --         -- if you lazy-load any plugin below, make sure to add proper `module='...'` entries
-    --         'MunifTanjim/nui.nvim',
-    --         -- OPTIONAL:
-    --         --   `nvim-notify` is only needed, if you want to use the notification view.
-    --         --   If not available, we use `mini` as the fallback
-    --         'rcarriga/nvim-notify',
-    --     }
-    -- },
     {
         'sbdchd/neoformat',
         config = function ()
@@ -196,7 +138,7 @@ Plugins = {
     },
     -- End of on trial plugins
 
-    -- 'Aadv1k/gdoc.vim',                 -- Google Docs
+    'mbbill/undotree',                 -- See undos in a pretty UI
     'dstein64/vim-startuptime',        -- Startup Time
     'chentoast/marks.nvim',            -- Better marks
     'alec-gibson/nvim-tetris',         -- Tetris
@@ -231,14 +173,14 @@ Plugins = {
     },
 
     -- It was supposed to be grammar help for comments and so, but its not working
-    {
-        'rhysd/vim-grammarous',
-        dependencies = {
-            'Shougo/vimproc.vim',
-            'Shougo/unite.vim',
-            'kana/vim-operator-user',
-        },
-    },
+    -- {
+    --     'rhysd/vim-grammarous',
+    --     dependencies = {
+    --         'Shougo/vimproc.vim',
+    --         'Shougo/unite.vim',
+    --         'kana/vim-operator-user',
+    --     },
+    -- },
 
     -- File explorer
     {
@@ -303,4 +245,5 @@ Plugins = {
     'EdenEast/nightfox.nvim',
     'miikanissi/modus-themes.nvim',
     'maxmx03/fluoromachine.nvim',
+    'nyoom-engineering/oxocarbon.nvim',
 }
