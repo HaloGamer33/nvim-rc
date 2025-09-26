@@ -25,12 +25,18 @@ cmd('language en_US.utf8')
 
 -- Highlighting yanked selection.
 vim.api.nvim_create_autocmd('TextYankPost', {
-  group = vim.api.nvim_create_augroup('highlight_yank', {}),
-  desc = 'Hightlight selection on yank',
-  pattern = '*',
-  callback = function()
-    vim.highlight.on_yank { higroup = 'IncSearch', timeout = 150 }
-  end,
+    group = vim.api.nvim_create_augroup('highlight_yank', {}),
+    desc = 'Hightlight selection on yank',
+    pattern = '*',
+    callback = function()
+        vim.highlight.on_yank { higroup = 'IncSearch', timeout = 150 }
+    end,
+})
+
+-- File type detection for your custom config files
+vim.api.nvim_create_autocmd({'BufEnter'}, {
+    pattern = vim.fn.expand('~') .. '/.dotfiles/shared_configs/.shared_configs/*',
+    command = 'set filetype=sh',
 })
 
 -- Limit line length to 100 on markdown files
