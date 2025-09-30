@@ -35,7 +35,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- File type detection for your custom config files
 vim.api.nvim_create_autocmd({'BufEnter'}, {
-    pattern = vim.fn.expand('~') .. '/.dotfiles/shared_configs/.shared_configs/*',
+    pattern = vim.fn.expand('~') .. '/.dotfiles/.shared_configs/.shared_configs/*',
     command = 'set filetype=sh',
 })
 
