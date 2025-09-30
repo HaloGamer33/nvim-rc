@@ -1,6 +1,7 @@
--- You dont need to set any of these options. These are the default ones. Only
--- the loading is important
-require('telescope').setup {
+local builtin = require('telescope.builtin')
+local extensions = require('telescope').extensions
+
+telescope = require('telescope').setup {
     defaults = {
         file_ignore_patterns = {
             ".git\\",
@@ -21,6 +22,18 @@ require('telescope').setup {
             "__pycache__/",
         },
     },
+    pickers = {
+        help_tags = {
+            mappings = {
+                i = {
+                    ['<CR>'] = 'select_tab',
+                },
+                n = {
+                    ['<CR>'] = 'select_tab',
+                },
+            }
+        }
+    },
     extensions = {
         fzf = {
             fuzzy = true,                    -- false will only do exact matching
@@ -35,17 +48,16 @@ require('telescope').setup {
 -- To get fzf loaded and working with telescope, you need to call
 -- load_extension, somewhere after setup function:
 require('telescope').load_extension('fzf')
--- require('telescope').load_extension('projects')
 
--- setting keybinds
-local builtin = require('telescope.builtin')
-local extensions = require('telescope').extensions
-
+-- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+-- ┃                    Setting key-binds                    ┃
+-- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 vim.keymap.set('n', '<leader>ff', function()
-    builtin.find_files({ hidden = true })
+    builtin.find_files({
+        hidden = true,
+        -- no_ignore = true,
+    })
 end, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', extensions.file_browser.file_browser, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
--- vim.keymap.set('n', '<leader>fp', extensions.projects.projects, {})
--- vim.keymap.set('n', '<leader>fp', vim.cmd('Telescope projects'))
