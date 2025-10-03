@@ -13,13 +13,15 @@ set({'i', 'c'}, '<C-H>', '<C-W>') -- 'ctrl + backspace' to delete whole word in 
 set({'n', 'v'}, 'j', 'gj')
 set({'n', 'v'}, 'k', 'gk')
 
--- Yanking and pasting into/from the system clipboard.
+-- Yanking/pasting/deleting into/from the system clipboard.
 set({'n', 'v'}, '<leader>y', '"+y')
 set({'n', 'v'}, '<leader>p', '"+p')
+set({'n', 'v'}, '<leader>d', '"+d')
 
 -- Refactor with the help of the LSP.
 set('n', '<leader>rn', vim.lsp.buf.rename)
-set('n', '<leader>gr', vim.lsp.buf.references)
+set('n', 'gr', vim.lsp.buf.references)
+set('n', 'gd', vim.lsp.buf.definition)
 
-set('n', '<M-C-K>', 'gt')
-set('n', '<M-C-J>', 'gT')
+set('n', '<M-C-K>', 'gt') -- Alt + Ctrl + K -> Next Tab
+set('n', '<M-C-J>', 'gT') -- Alt + Ctrl + J -> Previous Tab
