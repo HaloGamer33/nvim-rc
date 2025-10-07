@@ -7,12 +7,12 @@ Plugins = {
         end,
     },
     'ohakutsu/socks-copypath.nvim',
-    -- {
-    --     'norcalli/nvim-colorizer.lua',
-    --     config = function ()
-    --         require('colorizer').setup()
-    --     end
-    -- },
+    {
+        "catgoose/nvim-colorizer.lua",
+        event = "BufReadPre",
+        opts = { -- set to setup table
+        },
+    },
     {
         'shortcuts/no-neck-pain.nvim',
         config = function ()
