@@ -18,10 +18,10 @@ set({'n', 'v'}, '<leader>y', '"+y')
 set({'n', 'v'}, '<leader>p', '"+p')
 set({'n', 'v'}, '<leader>d', '"+d')
 
--- Refactor with the help of the LSP.
-set('n', '<leader>rn', vim.lsp.buf.rename)
-set('n', 'gr', vim.lsp.buf.references)
-set('n', 'gd', vim.lsp.buf.definition)
+-- LSP Bindings.
+set('n', 'grn', vim.lsp.buf.rename) -- Rename the symbol under the cursor.
+set('n', 'gr', vim.lsp.buf.references) -- Go the uses of the symbol under the cursor.
+set('n', 'gd', vim.lsp.buf.definition) -- Go to the creation of the symbol under the cursor.
 
 set('n', '<M-C-K>', 'gt') -- Alt + Ctrl + K -> Next Tab
 set('n', '<M-C-J>', 'gT') -- Alt + Ctrl + J -> Previous Tab
