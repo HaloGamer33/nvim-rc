@@ -18,3 +18,13 @@ vim.api.nvim_create_user_command(
     end,
     {nargs = 1, complete = 'help'}
 )
+
+vim.api.nvim_create_user_command(
+    'ChatGPTWrittingSpace',
+    function(args)
+        vim.cmd.tabnew()
+        vim.cmd("NoNeckPain")
+        vim.cmd("set wrap")
+    end,
+    {nargs = 0}
+)
