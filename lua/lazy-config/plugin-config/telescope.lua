@@ -58,6 +58,12 @@ vim.keymap.set('n', '<leader>ff', function()
         -- no_ignore = true,
     })
 end, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fg', function()
+    builtin.live_grep({
+        additional_args = {
+            "--hidden"
+        }
+    })
+end, {})
 vim.keymap.set('n', '<leader>fb', extensions.file_browser.file_browser, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})

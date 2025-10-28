@@ -1,103 +1,52 @@
 Plugins = {
-    -- On trial
+    'alec-gibson/nvim-tetris',         -- Tetris
+    'barrett-ruth/live-server.nvim',   -- Live server
+    'chentoast/marks.nvim',            -- Better marks
+    'dstein64/vim-startuptime',        -- Startup Time
+    'Eandrju/cellular-automaton.nvim', -- Little visual games for the text buffer
+    'fladson/vim-kitty',               -- Syntax highlighting for kitty terminal config files
+    'folke/twilight.nvim',             -- Focus on cursor dimming everything else
+    'junegunn/vim-easy-align',         -- Align based on characters
+    'koenverburg/peepsight.nvim',      -- Focus on cursor dimming everything else
+    'lambdalisue/suda.vim',            -- Write/Read as sudo
+    'LudoPinelli/comment-box.nvim',    -- Comment boxes
+    'mbbill/undotree',                 -- See undos in a pretty UI
+    'numToStr/Comment.nvim',           -- `gcc` to quickly comment
+    'ThePrimeagen/vim-be-good',        -- ThePrimeagen goated game
+    'xiyaowong/transparent.nvim',      -- Transparent backgrounds
+    'rktjmp/hotpot.nvim',
+
     {
-        'barreiroleo/ltex_extra.nvim',
+        "chrisgrieser/nvim-chainsaw",
+        event = "VeryLazy",
+        opts = {} -- required even if left empty
+    },
+    -- Adds commands to copy path of the current file
+    {
+        'ohakutsu/socks-copypath.nvim',
         config = function()
-            require("socks-copypath").setup()
+            require('socks-copypath').setup()
         end,
     },
-    'ohakutsu/socks-copypath.nvim',
+    -- Obsidian companion plugin
     {
-        "catgoose/nvim-colorizer.lua",
-        event = "BufReadPre",
-        opts = { -- set to setup table
+        'epwalsh/obsidian.nvim',
+        version = '*',
+        lazy = true,
+        ft = 'md',
+        dependencies = {
+            'nvim-lua/plenary.nvim',
         },
     },
+    -- When typing a symbol that has a pair it automatically puts the other side
     {
-        'shortcuts/no-neck-pain.nvim',
-        config = function ()
-            require('no-neck-pain').setup({
-                width = 80
-            })
-        end
+        'windwp/nvim-autopairs',
+        event = 'InsertEnter',
+        config = true
+        -- use opts = {} for passing setup options
+        -- this is equivalent to setup({}) function
     },
-    {
-        'echasnovski/mini.move',
-        version = false,
-        config = function ()
-            require('mini.move').setup({
-                -- Module mappings. Use `''` (empty string) to disable one.
-                mappings = {
-                    -- Move visual selection in Visual mode. Defaults are Alt (Meta) + hjkl.
-                    left = 'H',
-                    right = 'L',
-                    down = 'J',
-                    up = 'K',
-
-                    -- Move current line in Normal mode
-                    line_left = '',
-                    line_right = '',
-                    line_down = '',
-                    line_up = '',
-                },
-
-                -- Options which control moving behavior
-                options = {
-                    -- Automatically reindent selection during linewise vertical move
-                    reindent_linewise = true,
-                },
-            }
-            )
-        end
-    },
-    {
-        'sbdchd/neoformat',
-        config = function ()
-            vim.g.neoformat_typescript_prettier = {
-                exe = 'prettier',
-                args = {
-                    '--stdin-filepath',
-                    '"%:p"',
-                    '--tab-width',
-                    '4',
-                    '--single-quote',
-                    '--experimental-ternaries',
-                },
-                stdin = 1
-            }
-            vim.g.neoformat_javascript_prettier = {
-                exe = 'prettier',
-                args = {
-                    '--stdin-filepath',
-                    '"%:p"',
-                    '--tab-width',
-                    '4',
-                    '--single-quote',
-                    '--experimental-ternaries',
-                },
-                stdin = 1
-            }
-        end
-    },
-    {
-        'karb94/neoscroll.nvim',
-        config = function ()
-            require('neoscroll').setup{
-                hide_cursor = true,
-                duration_multiplier = 0.05,
-                easing = 'linear',
-            }
-        end
-    },
-    {
-        'goolord/alpha-nvim',
-        dependencies = { 'echasnovski/mini.icons' },
-    },
-    {
-        'vyfor/cord.nvim',
-        build = ':Cord update',
-        -- opts = {}
-    },
+    -- This plugin makes it so lua LSP works on the Nvim configuration context
     {
         'folke/lazydev.nvim',
         ft = 'lua', -- only load on lua files
@@ -109,6 +58,36 @@ Plugins = {
             },
         },
     },
+    -- Use bindings to move selected text
+    {
+        'echasnovski/mini.move',
+        version = false,
+    },
+    -- Center text with the help of two buffers on the edges of the screen
+    {
+        'shortcuts/no-neck-pain.nvim',
+        config = function ()
+            require('no-neck-pain').setup({
+                width = 86
+            })
+        end
+    },
+    -- Have a prview of colors on top of the text (#FF0000)
+    {
+        'catgoose/nvim-colorizer.lua',
+        -- event = 'BufReadPre',
+        opts = { -- set to setup table
+        },
+        config = function ()
+            require('colorizer').setup()
+        end,
+    },
+    -- Startup dashboard for Neovim
+    {
+        'goolord/alpha-nvim',
+        dependencies = { 'echasnovski/mini.icons' },
+    },
+    -- Have lines that show indentation
     {
         'lukas-reineke/indent-blankline.nvim',
         main = 'ibl',
@@ -116,44 +95,6 @@ Plugins = {
         ---@type ibl.config
         opts = {},
     },
-    {
-        'windwp/nvim-ts-autotag',
-        config = function()
-            require('nvim-ts-autotag').setup({
-                opts = {
-                    -- Defaults
-                    enable_close = true, -- Auto close tags
-                    enable_rename = true, -- Auto rename pairs of tags
-                    enable_close_on_slash = false -- Auto close on trailing </
-                }
-            })
-        end
-    },
-    {
-        'windwp/nvim-autopairs',
-        event = 'InsertEnter',
-        config = true
-        -- use opts = {} for passing setup options
-        -- this is equivalent to setup({}) function
-    },
-    -- End of on trial plugins
-
-    'mbbill/undotree',                 -- See undos in a pretty UI
-    'dstein64/vim-startuptime',        -- Startup Time
-    'chentoast/marks.nvim',            -- Better marks
-    'alec-gibson/nvim-tetris',         -- Tetris
-    'Eandrju/cellular-automaton.nvim', -- Text on buffer melts
-    'LudoPinelli/comment-box.nvim',    -- Comment boxes
-    'terrortylor/nvim-comment',        -- `gcc` to quickly comment
-    'barrett-ruth/live-server.nvim',   -- Live server
-    'fladson/vim-kitty',               -- Syntax highlighting for kitty terminal config files
-    'lambdalisue/suda.vim',            -- Write/Read as sudo
-    'ThePrimeagen/vim-be-good',        -- ThePrimeagen goated game
-    'junegunn/vim-easy-align',         -- Align based on characters
-    'xiyaowong/transparent.nvim',      -- Transparent backgrounds
-    'folke/twilight.nvim',             -- Focus on cursor dimming everything else
-    'koenverburg/peepsight.nvim',      -- Focus on cursor dimming everything else
-
     -- Live Github-like markdown preview
     {
         'iamcco/markdown-preview.nvim',
@@ -164,14 +105,12 @@ Plugins = {
         end,
         ft = { 'markdown' },
     },
-
     -- Harpoon, do I need to say more?
     {
         'ThePrimeagen/harpoon',
         branch = 'harpoon2',
         dependencies = { 'nvim-lua/plenary.nvim' },
     },
-
     -- It was supposed to be grammar help for comments and so, but its not working
     -- {
     --     'rhysd/vim-grammarous',
@@ -181,7 +120,6 @@ Plugins = {
     --         'kana/vim-operator-user',
     --     },
     -- },
-
     -- File explorer
     {
         'nvim-tree/nvim-tree.lua',
@@ -194,7 +132,6 @@ Plugins = {
             require('nvim-tree').setup {}
         end,
     },
-
     -- The famous Treesitter
     {
         'nvim-treesitter/nvim-treesitter',
@@ -202,7 +139,6 @@ Plugins = {
             vim.cmd.TSUpdate()
         end,
     },
-
     -- Code context with Treesitter
     {
         'nvim-treesitter/nvim-treesitter-context',
@@ -225,12 +161,16 @@ Plugins = {
         end,
     },
 
-    -- Lsp
+    -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+    -- ┃                           Lsp                           ┃
+    -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
     'neovim/nvim-lspconfig',
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
 
-    -- Completion
+    -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+    -- ┃                       Completion                        ┃
+    -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
     'hrsh7th/nvim-cmp',
     {
         'L3MON4D3/LuaSnip',
@@ -242,7 +182,9 @@ Plugins = {
     'saadparwaiz1/cmp_luasnip',     -- Makes luasnips sources for completion
     'rafamadriz/friendly-snippets', -- Gives VSCode like Snipets in LuaSnip
 
-    -- Telescope
+    -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+    -- ┃                        Telescope                        ┃
+    -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
     {
         'nvim-telescope/telescope.nvim',
         dependencies = {
@@ -260,7 +202,9 @@ Plugins = {
         dependencies = { 'nvim-telescope/telescope.nvim', 'nvim-lua/plenary.nvim' }
     },
 
-    -- Color schemes
+    -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+    -- ┃                      Color schemes                      ┃
+    -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
     'rebelot/kanagawa.nvim',
     'folke/tokyonight.nvim',
     'kepano/flexoki-neovim',

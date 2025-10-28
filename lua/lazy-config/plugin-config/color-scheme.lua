@@ -33,5 +33,9 @@ require("tokyonight").setup({
     ---@param colors ColorScheme
     on_highlights = function(highlights, colors) end,
 })
-
-vim.cmd.colorscheme('oxocarbon')
+vim.opt.background = "dark"
+vim.cmd.colorscheme "oxocarbon"
+-- local colors = require('oxocarbon').oxocarbon -- or wherever the palette is
+-- for k, v in pairs(colors) do
+--     print(k .. ": " .. v)
+-- end

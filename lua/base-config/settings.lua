@@ -50,6 +50,8 @@ vim.api.nvim_create_autocmd({'VimLeave'}, {
         vim.fn.system('wezterm cli set-tab-title ""')
     end,
 })
+
+
 -- Limit line length to 100 on markdown files
 -- vim.api.nvim_create_autocmd('FileType', {
 --     pattern = 'markdown',
