@@ -3,6 +3,7 @@ local set = vim.keymap.set
 
 -- Settings
 vim.g.mapleader = ' ' -- Mapping leader to space.
+vim.g.localleader = ','
 
 set({'i', 'c'}, '<C-H>', '<C-W>') -- 'ctrl + backspace' to delete whole word in insert mode.
 

@@ -14,8 +14,28 @@ Plugins = {
     'numToStr/Comment.nvim',           -- `gcc` to quickly comment
     'ThePrimeagen/vim-be-good',        -- ThePrimeagen goated game
     'xiyaowong/transparent.nvim',      -- Transparent backgrounds
-    'rktjmp/hotpot.nvim',
+    'rktjmp/hotpot.nvim',              -- Fennel integration (be able to run ':Fnlfile my-file.fnl' on Oxocarbon)
 
+    -- Find and Replace
+    {
+        'MagicDuck/grug-far.nvim',
+        -- Note (lazy loading): grug-far.lua defers all it's requires so it's lazy by default
+        -- additional lazy config to defer loading is not really needed...
+        config = function()
+            -- optional setup call to override plugin options
+            -- alternatively you can set options with vim.g.grug_far = { ... }
+            require('grug-far').setup({
+                -- options, see Configuration section below
+                -- there are no required options atm
+            });
+        end
+    },
+    {
+        "SergioRibera/codeshot.nvim",
+    },      -- Create images from code 'screenshots'
+
+    { "mistricky/codesnap.nvim", build = "make" },
+    -- Quickly create logging statements
     {
         "chrisgrieser/nvim-chainsaw",
         event = "VeryLazy",
