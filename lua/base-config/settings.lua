@@ -39,17 +39,18 @@ vim.api.nvim_create_autocmd({'BufEnter'}, {
     command = 'set filetype=sh',
 })
 
-vim.api.nvim_create_autocmd({'VimEnter'}, {
-    callback = function()
-        vim.fn.system('wezterm cli set-tab-title " nvim "')
-    end,
-})
-
-vim.api.nvim_create_autocmd({'VimLeave'}, {
-    callback = function()
-        vim.fn.system('wezterm cli set-tab-title ""')
-    end,
-})
+-- Setting Wezterm title to 'nvim' when nvim opens
+-- vim.api.nvim_create_autocmd({'VimEnter'}, {
+--     callback = function()
+--         vim.fn.system('wezterm cli set-tab-title " nvim "')
+--     end,
+-- })
+--
+-- vim.api.nvim_create_autocmd({'VimLeave'}, {
+--     callback = function()
+--         vim.fn.system('wezterm cli set-tab-title ""')
+--     end,
+-- })
 
 
 -- Limit line length to 100 on markdown files

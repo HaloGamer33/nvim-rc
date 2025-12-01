@@ -1,5 +1,5 @@
 -- For neo-tree.nvim
--- vim.keymap.set('n', '<leader>`', '<cmd>Neotree toggle<cr>')   -- 'Leader + `' to open file tree.
+vim.keymap.set('n', '<C-n>', '<cmd>Neotree position=float reveal=true toggle=true<cr>')
 
 -- For nvim-tree.lua
-vim.keymap.set('n', '<leader>~', '<cmd>NvimTreeToggle<cr>')
+-- vim.keymap.set('n', '<C-n>', '<cmd>NvimTreeToggle<cr>')
