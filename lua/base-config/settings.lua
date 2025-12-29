@@ -11,6 +11,7 @@ vim.o.expandtab = true     -- Use spaces instead of tab characters
 vim.o.wrap = false         -- Do not wrap lines that go over the screen
 vim.o.scrolloff = 99       -- Try to keep 99 lines above and below the cursor at all times (centers the cursor)
 vim.o.termguicolors = true -- Enable 24-bit RGB color in the TUI
+vim.o.smartcase = true     -- Use smartcase when searching
 vim.o.ignorecase = true    -- Ignore case when searching
 vim.o.fileformat = 'unix'  -- Always use unix file format (end line character) instead of windows file format
 vim.o.linebreak = true     -- Wrap on words and not on charactes when 'set wrap'
