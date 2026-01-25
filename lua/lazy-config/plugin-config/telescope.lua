@@ -48,6 +48,7 @@ telescope = require('telescope').setup {
 -- To get fzf loaded and working with telescope, you need to call
 -- load_extension, somewhere after setup function:
 require('telescope').load_extension('fzf')
+require("telescope").load_extension("recent_files")
 
 -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 -- ┃                    Setting key-binds                    ┃
@@ -67,3 +68,4 @@ vim.keymap.set('n', '<leader>fg', function()
 end, {})
 vim.keymap.set('n', '<leader>fb', extensions.file_browser.file_browser, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>fr', extensions.recent_files.pick, {})

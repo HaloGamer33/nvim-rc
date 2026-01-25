@@ -15,7 +15,18 @@ Plugins = {
     'ThePrimeagen/vim-be-good',        -- ThePrimeagen goated game
     'xiyaowong/transparent.nvim',      -- Transparent backgrounds
     'rktjmp/hotpot.nvim',              -- Fennel integration (be able to run ':Fnlfile my-file.fnl' on Oxocarbon)
+    'smartpde/telescope-recent-files',
 
+    -- Refactor tools brought to you by ThePrimeagen (creator) & TheLeoP (main contributor 2026-Jan-02)
+    {
+        "ThePrimeagen/refactoring.nvim",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-treesitter/nvim-treesitter",
+        },
+        lazy = false,
+        opts = {},
+    },
     -- Find and Replace
     {
         'MagicDuck/grug-far.nvim',

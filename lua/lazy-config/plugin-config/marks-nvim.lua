@@ -33,12 +33,14 @@ require'marks'.setup {
         annotate = false,
     },
     mappings = {
-        set = "ms",
+        set = "ms", -- 'Mark Set'
+        set_next = "ma", -- 'Mark Add'
 
-        delete = "md",
+        delete = "mdm", -- 'Mark Delete Mark'
+        delete_line = "mdd", -- 'Mark Delete Line'
 
-        next = "mn",
-        prev = "mp",
+        next = "mn", -- 'Mark Next'
+        prev = "mp", -- 'Mark Previous'
     }
 }
 

@@ -2,7 +2,7 @@ require('obsidian').setup({
     workspaces = {
         {
             name = 'Halo Stash',
-            path = '~/halo-stash/2-Areas/obsidian-vault',
+            path = '~/halo-stash/2-Areas/Obsidian-Vault',
         },
     },
     -- Optional, set the log level for obsidian.nvim. This is an integer corresponding to one of the log
