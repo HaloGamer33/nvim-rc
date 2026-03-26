@@ -7,6 +7,7 @@ vim.o.number = true
 vim.o.shiftwidth = 4       -- Use 4 spaces for indentation
 vim.o.smarttab = true      -- QOL for indentation
 vim.o.expandtab = true     -- Use spaces instead of tab characters
+vim.o.tabstop = 4
 -- Miscellaneous
 vim.o.wrap = false         -- Do not wrap lines that go over the screen
 vim.o.scrolloff = 99       -- Try to keep 99 lines above and below the cursor at all times (centers the cursor)
