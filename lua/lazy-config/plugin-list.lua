@@ -14,7 +14,7 @@ Plugins = {
     'numToStr/Comment.nvim',           -- `gcc` to quickly comment
     'ThePrimeagen/vim-be-good',        -- ThePrimeagen goated game
     'xiyaowong/transparent.nvim',      -- Transparent backgrounds
-    'rktjmp/hotpot.nvim',              -- Fennel integration (be able to run ':Fnlfile my-file.fnl' on Oxocarbon)
+    -- 'rktjmp/hotpot.nvim',              -- Fennel integration (be able to run ':Fnlfile my-file.fnl' on Oxocarbon)
     'smartpde/telescope-recent-files',
 
     -- Mark trailling whitespace
@@ -200,13 +200,30 @@ Plugins = {
             require('nvim-tree').setup {}
         end,
     },
+    {
+        'mks-h/treesitter-autoinstall.nvim',
+    },
     -- The famous Treesitter
     {
         'nvim-treesitter/nvim-treesitter',
+        lazy = false,
+        branch = "main",
         config = function()
             vim.cmd.TSUpdate()
         end,
     },
+    -- The king is dead it seems
+    -- {
+    --     "romus204/tree-sitter-manager.nvim",
+    --     dependencies = {}, -- tree-sitter CLI must be installed system-wide
+    --     config = function()
+    --         require("tree-sitter-manager").setup({
+    --             -- Optional: custom paths
+    --             -- parser_dir = vim.fn.stdpath("data") .. "/site/parser",
+    --             -- query_dir = vim.fn.stdpath("data") .. "/site/queries",
+    --         })
+    --     end
+    -- },
     -- Code context with Treesitter
     {
         'nvim-treesitter/nvim-treesitter-context',
