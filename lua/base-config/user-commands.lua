@@ -28,3 +28,25 @@ vim.api.nvim_create_user_command(
     end,
     {nargs = 0}
 )
+
+vim.api.nvim_create_user_command('InsertPreface', function(opts)
+    local filepath = vim.fn.expand('%:p')
+    local system_obj = vim.system({'preface-generator.bash', filepath}, {text = true}):wait()
+    local output = system_obj.stdout
+
+    local commentstr = vim.bo.commentstring
+    local commented = ""
+    for line in string.gmatch(output, ".-\n") do
+        local commented_line = commentstr:gsub('%%s', line):gsub(' +\n', '\n')
+        commented = commented .. commented_line
+    end
+
+    if opts.range > 0 then
+        -- Delete the visual selection, then paste into its place
+        vim.api.nvim_buf_set_lines(0, opts.line1 - 1, opts.line2, false, {})
+        vim.api.nvim_win_set_cursor(0, {opts.line1, 0})
+    end
+
+    vim.api.nvim_paste(commented, true, -1)
+    vim.api.nvim_win_set_cursor(0, {opts.line1, 0})
+end, { range = true })
