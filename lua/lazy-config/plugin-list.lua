@@ -45,15 +45,15 @@ Plugins = {
         end
     },
     -- Refactor tools brought to you by ThePrimeagen (creator) & TheLeoP (main contributor 2026-Jan-02)
-    {
-        "ThePrimeagen/refactoring.nvim",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-treesitter/nvim-treesitter",
-        },
-        lazy = false,
-        opts = {},
-    },
+    -- {
+    --     "ThePrimeagen/refactoring.nvim",
+    --     dependencies = {
+    --         "nvim-lua/plenary.nvim",
+    --         "nvim-treesitter/nvim-treesitter",
+    --     },
+    --     lazy = false,
+    --     opts = {},
+    -- },
     -- Find and Replace
     {
         'MagicDuck/grug-far.nvim',
@@ -204,14 +204,14 @@ Plugins = {
         'mks-h/treesitter-autoinstall.nvim',
     },
     -- The famous Treesitter
-    {
-        'nvim-treesitter/nvim-treesitter',
-        lazy = false,
-        branch = "main",
-        config = function()
-            vim.cmd.TSUpdate()
-        end,
-    },
+    -- {
+    --     'nvim-treesitter/nvim-treesitter',
+    --     lazy = false,
+    --     branch = "main",
+    --     config = function()
+    --         vim.cmd.TSUpdate()
+    --     end,
+    -- },
     -- The king is dead it seems
     -- {
     --     "romus204/tree-sitter-manager.nvim",
@@ -225,26 +225,26 @@ Plugins = {
     --     end
     -- },
     -- Code context with Treesitter
-    {
-        'nvim-treesitter/nvim-treesitter-context',
-        config = function()
-            require'treesitter-context'.setup{
-                enable = false, -- Enable this plugin (Can be enabled/disabled later via commands)
-                multiwindow = false, -- Enable multiwindow support.
-                max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
-                min_window_height = 0, -- Minimum editor window height to enable context. Values <= 0 mean no limit.
-                line_numbers = true,
-                multiline_threshold = 20, -- Maximum number of lines to show for a single context
-                trim_scope = 'outer', -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
-                mode = 'cursor',  -- Line used to calculate context. Choices: 'cursor', 'topline'
-                -- Separator between context and content. Should be a single character string, like '-'.
-                -- When separator is set, the context will only show up when there are at least 2 lines above cursorline.
-                separator = nil,
-                zindex = 20, -- The Z-index of the context window
-                on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
-            }
-        end,
-    },
+    -- {
+    --     'nvim-treesitter/nvim-treesitter-context',
+    --     config = function()
+    --         require'treesitter-context'.setup{
+    --             enable = false, -- Enable this plugin (Can be enabled/disabled later via commands)
+    --             multiwindow = false, -- Enable multiwindow support.
+    --             max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
+    --             min_window_height = 0, -- Minimum editor window height to enable context. Values <= 0 mean no limit.
+    --             line_numbers = true,
+    --             multiline_threshold = 20, -- Maximum number of lines to show for a single context
+    --             trim_scope = 'outer', -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
+    --             mode = 'cursor',  -- Line used to calculate context. Choices: 'cursor', 'topline'
+    --             -- Separator between context and content. Should be a single character string, like '-'.
+    --             -- When separator is set, the context will only show up when there are at least 2 lines above cursorline.
+    --             separator = nil,
+    --             zindex = 20, -- The Z-index of the context window
+    --             on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
+    --         }
+    --     end,
+    -- },
 
     -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
     -- ┃                           Lsp                           ┃
