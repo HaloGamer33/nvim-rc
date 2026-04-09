@@ -61,12 +61,36 @@ end, { range = true, nargs = "?" })
 vim.api.nvim_create_user_command("InsertScriptSections", function(opts)
     vim.api.nvim_paste("Initialization", true, -1)
     vim.api.nvim_cmd(vim.api.nvim_parse_cmd("CBlcbox3", {}), {output = false})
-    vim.api.nvim_command("normal o")
+    vim.api.nvim_command("normal o")
     vim.api.nvim_command("normal o")
     vim.api.nvim_command("normal o")
     vim.api.nvim_command("normal o")
     vim.api.nvim_paste("Script Body", true, -1)
     vim.api.nvim_cmd(vim.api.nvim_parse_cmd("CBlcbox3", {}), {output = false})
+    vim.api.nvim_command("normal o")
     vim.api.nvim_command("normal o")
-    vim.api.nvim_command("normal o")
+end, {})
+
+vim.api.nvim_create_user_command("InsertScriptImports", function(opts)
+    local text = ""
+    text = text .. 'source ~/scripts/lib/parse_args.bash\n'
+    text = text .. 'eval "$(extract-file-info.bash $0 | rg \'^DESCRIPTION=\')"\n'
+    text = text .. 'add_description "$DESCRIPTION"\n'
+    text = text .. 'add_positional                         "EXAMPLE" "Description of the positional argument."\n'
+    text = text .. 'add_option_with_value "-f" "--file"    "EXAMPLE" "Description of the option with value."\n'
+    text = text .. 'add_option            ""   "--verbose"           "Description of the option/flag."\n'
+    text = text .. 'parse_args "$@"\n'
+    text = text .. '[[ "$OPT_VERBOSE" == "true" ]] && LOG_LEVEL=DEBUG\n'
+    text = text .. 'source ~/scripts/lib/liblog.bash'
+    vim.api.nvim_paste(text, true, -1)
+end, {})
+
+vim.api.nvim_create_user_command("ScriptTemplate", function(opts)
+    vim.api.nvim_paste("#!/usr/bin/env bash\n\n", true, -1)
+    vim.api.nvim_cmd(vim.api.nvim_parse_cmd("InsertPreface", {}), {output = false})
+    vim.api.nvim_command("normal Go")
+    vim.api.nvim_cmd(vim.api.nvim_parse_cmd("InsertScriptSections", {}), {output = false})
+    vim.api.nvim_command("normal 6k")
+    vim.api.nvim_cmd(vim.api.nvim_parse_cmd("InsertScriptImports", {}), {output = false})
+    vim.api.nvim_command("normal G")
 end, {})
