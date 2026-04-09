@@ -1,7 +1,7 @@
-vim.cmd('command! Delmarks delm a-zA-Z0-9')
+vim.cmd("command! Delmarks delm a-zA-Z0-9")
 
 vim.api.nvim_create_user_command(
-    'Help',
+    "Help",
     function(args)
         vim.cmd.tabnew()
 
@@ -16,11 +16,11 @@ vim.api.nvim_create_user_command(
 
         vim.cmd.only()
     end,
-    {nargs = 1, complete = 'help'}
+    {nargs = 1, complete = "help"}
 )
 
 vim.api.nvim_create_user_command(
-    'ChatGPTWrittingSpace',
+    "ChatGPTWrittingSpace",
     function(args)
         vim.cmd.tabnew()
         vim.cmd("NoNeckPain")
@@ -29,15 +29,22 @@ vim.api.nvim_create_user_command(
     {nargs = 0}
 )
 
-vim.api.nvim_create_user_command('InsertPreface', function(opts)
-    local filepath = vim.fn.expand('%:p')
-    local system_obj = vim.system({'preface-generator.bash', filepath}, {text = true}):wait()
+vim.api.nvim_create_user_command("InsertPreface", function(opts)
+    local filepath = vim.fn.expand("%:p")
+    local arguments = {}
+    table.insert(arguments, "preface-generator.bash")
+    table.insert(arguments, filepath)
+    if opts.args ~= "" then
+        table.insert(arguments, "-d")
+        table.insert(arguments, opts.args)
+    end
+    local system_obj = vim.system(arguments, {text = true}):wait()
     local output = system_obj.stdout
 
     local commentstr = vim.bo.commentstring
     local commented = ""
     for line in string.gmatch(output, ".-\n") do
-        local commented_line = commentstr:gsub('%%s', line):gsub(' +\n', '\n')
+        local commented_line = commentstr:gsub("%%s", line):gsub(" +\n", "\n")
         commented = commented .. commented_line
     end
 
