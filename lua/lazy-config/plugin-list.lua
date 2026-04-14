@@ -11,7 +11,6 @@ Plugins = {
     'lambdalisue/suda.vim',            -- Write/Read as sudo
     'LudoPinelli/comment-box.nvim',    -- Comment boxes
     'mbbill/undotree',                 -- See undos in a pretty UI
-    'numToStr/Comment.nvim',           -- `gcc` to quickly comment
     'ThePrimeagen/vim-be-good',        -- ThePrimeagen goated game
     'xiyaowong/transparent.nvim',      -- Transparent backgrounds
     -- 'rktjmp/hotpot.nvim',              -- Fennel integration (be able to run ':Fnlfile my-file.fnl' on Oxocarbon)

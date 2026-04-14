@@ -2,7 +2,6 @@
 require("lazy-config.plugin-config.treesitter")
 require("lazy-config.plugin-config.color-scheme")
 require("lazy-config.plugin-config.comment-box")
-require("lazy-config.plugin-config.nvim-comment")
 require("lazy-config.plugin-config.completions")
 require("lazy-config.plugin-config.lsp-config")
 require("lazy-config.plugin-config.telescope")
