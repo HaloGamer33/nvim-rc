@@ -21,7 +21,7 @@ vim.api.nvim_create_user_command(
 
 vim.api.nvim_create_user_command(
     "ChatGPTWrittingSpace",
-    function(args)
+    function()
         vim.cmd.tabnew()
         vim.cmd("NoNeckPain")
         vim.cmd("set wrap")
@@ -58,7 +58,7 @@ vim.api.nvim_create_user_command("InsertPreface", function(opts)
     vim.api.nvim_win_set_cursor(0, {opts.line1, 0})
 end, { range = true, nargs = "?" })
 
-vim.api.nvim_create_user_command("InsertScriptSections", function(opts)
+vim.api.nvim_create_user_command("InsertScriptSections", function()
     vim.api.nvim_paste("Initialization", true, -1)
     vim.api.nvim_cmd(vim.api.nvim_parse_cmd("CBlcbox3", {}), {output = false})
     vim.api.nvim_command("normal o")
@@ -71,7 +71,7 @@ vim.api.nvim_create_user_command("InsertScriptSections", function(opts)
     vim.api.nvim_command("normal o")
 end, {})
 
-vim.api.nvim_create_user_command("InsertScriptImports", function(opts)
+vim.api.nvim_create_user_command("InsertScriptImports", function()
     local text = ""
     text = text .. 'source ~/scripts/lib/parse_args.bash\n'
     text = text .. 'eval "$(extract-file-info.bash $0 | rg \'^DESCRIPTION=\')"\n'
@@ -85,7 +85,7 @@ vim.api.nvim_create_user_command("InsertScriptImports", function(opts)
     vim.api.nvim_paste(text, true, -1)
 end, {})
 
-vim.api.nvim_create_user_command("ScriptTemplate", function(opts)
+vim.api.nvim_create_user_command("ScriptTemplate", function()
     vim.api.nvim_paste("#!/usr/bin/env bash\n\n", true, -1)
     vim.api.nvim_cmd(vim.api.nvim_parse_cmd("InsertPreface", {}), {output = false})
     vim.api.nvim_command("normal Go")
