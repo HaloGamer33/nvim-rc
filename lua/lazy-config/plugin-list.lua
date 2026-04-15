@@ -14,7 +14,8 @@ Plugins = {
     'ThePrimeagen/vim-be-good',        -- ThePrimeagen goated game
     'xiyaowong/transparent.nvim',      -- Transparent backgrounds
     -- 'rktjmp/hotpot.nvim',              -- Fennel integration (be able to run ':Fnlfile my-file.fnl' on Oxocarbon)
-    'smartpde/telescope-recent-files',
+    'smartpde/telescope-recent-files', -- Obsidian companion plugin
+    'obsidian-nvim/obsidian.nvim',
 
     -- Mark trailling whitespace
     {
@@ -84,16 +85,6 @@ Plugins = {
         config = function()
             require('socks-copypath').setup()
         end,
-    },
-    -- Obsidian companion plugin
-    {
-        'epwalsh/obsidian.nvim',
-        version = '*',
-        lazy = true,
-        ft = 'md',
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-        },
     },
     -- When typing a symbol that has a pair it automatically puts the other side
     {
