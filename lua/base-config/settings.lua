@@ -49,39 +49,3 @@ vim.api.nvim_create_autocmd({"BufEnter"}, {
         vim.system({"xdg-open", 'obsidian://open?vault=Obsidian-Vault&file=' .. file})
     end,
 })
-
--- Setting Wezterm title to 'nvim' when nvim opens
--- vim.api.nvim_create_autocmd({'VimEnter'}, {
---     callback = function()
---         vim.fn.system('wezterm cli set-tab-title " nvim "')
---     end,
--- })
---
--- vim.api.nvim_create_autocmd({'VimLeave'}, {
---     callback = function()
---         vim.fn.system('wezterm cli set-tab-title ""')
---     end,
--- })
-
-
--- Limit line length to 100 on markdown files
--- vim.api.nvim_create_autocmd('FileType', {
---     pattern = 'markdown',
---     command = 'setlocal textwidth=100'
--- })
-
--- vim.api.nvim_create_autocmd('FileType', {
---     pattern = 'markdown',
---     callback = function ()
---         vim.opt_local.relativenumber = false
---         vim.opt_local.number = false
---         vim.opt_local.wrap = true
---         vim.opt_local.colorcolumn = ''
---         vim.cmd('NoNeckPain')  -- Executes the :NoNeckPain command
---         vim.cmd('colorscheme modus_vivendi')
---         vim.cmd('highlight WinSeparator guifg=bg')
-
---         vim.keymap.set('n', '$', 'g$', { buffer = 0, noremap = true, silent = true })
---         vim.keymap.set('n', '0', 'g0', { buffer = 0, noremap = true, silent = true })
---     end
--- })
