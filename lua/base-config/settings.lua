@@ -41,6 +41,15 @@ vim.api.nvim_create_autocmd({'BufEnter'}, {
     command = 'set filetype=sh',
 })
 
+-- Auto open files on obsidian if inside vault
+vim.api.nvim_create_autocmd({"BufEnter"}, {
+    pattern = vim.fn.expand('~') .. '/halo-stash/2-Areas/Obsidian-Vault/*.md',
+    callback = function(opt)
+        local file = string.match(opt.match, "/home/halo/halo%-stash/2%-Areas/Obsidian%-Vault/(.+).md")
+        vim.system({"xdg-open", 'obsidian://open?vault=Obsidian-Vault&file=' .. file})
+    end,
+})
+
 -- Setting Wezterm title to 'nvim' when nvim opens
 -- vim.api.nvim_create_autocmd({'VimEnter'}, {
 --     callback = function()
