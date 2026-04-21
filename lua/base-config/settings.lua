@@ -44,8 +44,20 @@ vim.api.nvim_create_autocmd({'BufEnter'}, {
 -- Auto open files on obsidian if inside vault
 vim.api.nvim_create_autocmd({"BufEnter"}, {
     pattern = vim.fn.expand('~') .. '/halo-stash/2-Areas/Obsidian-Vault/*.md',
-    callback = function(opt)
-        local file = string.match(opt.match, "/home/halo/halo%-stash/2%-Areas/Obsidian%-Vault/(.+).md")
-        vim.system({"xdg-open", 'obsidian://open?vault=Obsidian-Vault&file=' .. file})
+    callback = function()
+        -- local file = string.match(opt.match, "/home/halo/halo%-stash/2%-Areas/Obsidian%-Vault/(.+).md")
+        -- vim.system({"xdg-open", 'obsidian://open?vault=Obsidian-Vault&file=' .. file})
+        vim.api.nvim_set_option_value("conceallevel", 2, { scope = "local" })
+
+    end,
+})
+
+vim.api.nvim_create_autocmd({"FileType"}, {
+    pattern = "markdown",
+    callback = function()
+        vim.api.nvim_set_option_value("conceallevel", 2, { scope = "local" })
+        vim.api.nvim_set_option_value("wrap", true, { scope = "local" })
+        vim.api.nvim_set_option_value("colorcolumn", "", { scope = "local" })
+
     end,
 })

@@ -17,6 +17,35 @@ Plugins = {
     'smartpde/telescope-recent-files', -- Obsidian companion plugin
     'obsidian-nvim/obsidian.nvim',
 
+    {
+        "oflisback/obsidian-bridge.nvim",
+        opts = {
+            scroll_sync = true
+        },
+        event = {
+            "BufReadPre *.md",
+            "BufNewFile *.md",
+        },
+        lazy = true,
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
+    },
+    -- Markdown to PDF
+    {
+        'arminveres/md-pdf.nvim',
+        branch = 'main', -- you can assume that main is somewhat stable until releases will be made
+        lazy = true,
+        keys = {
+            {
+                "<leader>,",
+                function() require("md-pdf").convert_md_to_pdf() end,
+                desc = "Markdown preview",
+            },
+        },
+        ---@type md-pdf.config
+        opts = {},
+    },
     -- Mark trailling whitespace
     {
         'johnfrankmorgan/whitespace.nvim',
