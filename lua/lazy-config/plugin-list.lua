@@ -208,29 +208,29 @@ Plugins = {
         },
         lazy = false, -- neo-tree will lazily load itself
     },
-    {
-        'nvim-tree/nvim-tree.lua',
-        version = '*',
-        lazy = false,
-        dependencies = {
-            'nvim-tree/nvim-web-devicons',
-        },
-        config = function()
-            require('nvim-tree').setup {}
-        end,
-    },
+    -- {
+    --     'nvim-tree/nvim-tree.lua',
+    --     version = '*',
+    --     lazy = false,
+    --     dependencies = {
+    --         'nvim-tree/nvim-web-devicons',
+    --     },
+    --     config = function()
+    --         require('nvim-tree').setup {}
+    --     end,
+    -- },
     {
         'mks-h/treesitter-autoinstall.nvim',
     },
     -- The famous Treesitter
-    -- {
-    --     'nvim-treesitter/nvim-treesitter',
-    --     lazy = false,
-    --     branch = "main",
-    --     config = function()
-    --         vim.cmd.TSUpdate()
-    --     end,
-    -- },
+    {
+        'nvim-treesitter/nvim-treesitter',
+        lazy = false,
+        branch = "main",
+        config = function()
+            vim.cmd.TSUpdate()
+        end,
+    },
     -- The king is dead it seems
     -- {
     --     "romus204/tree-sitter-manager.nvim",
