@@ -26,3 +26,7 @@ set('n', 'gd', vim.lsp.buf.definition) -- Go to the creation of the symbol under
 
 set('n', '<M-C-K>', 'gt') -- Alt + Ctrl + K -> Next Tab
 set('n', '<M-C-J>', 'gT') -- Alt + Ctrl + J -> Previous Tab
+
+-- Command line mappings
+set('c', '<C-P>', '<Up>')
+set('c', '<C-N>', '<Down>')
