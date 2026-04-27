@@ -7,7 +7,6 @@ Plugins = {
     'fladson/vim-kitty',               -- Syntax highlighting for kitty terminal config files
     'folke/twilight.nvim',             -- Focus on cursor dimming everything else
     'junegunn/vim-easy-align',         -- Align based on characters
-    'koenverburg/peepsight.nvim',      -- Focus on cursor dimming everything else
     'lambdalisue/suda.vim',            -- Write/Read as sudo
     'LudoPinelli/comment-box.nvim',    -- Comment boxes
     'mbbill/undotree',                 -- See undos in a pretty UI
@@ -16,6 +15,7 @@ Plugins = {
     -- 'rktjmp/hotpot.nvim',              -- Fennel integration (be able to run ':Fnlfile my-file.fnl' on Oxocarbon)
     'smartpde/telescope-recent-files', -- Obsidian companion plugin
     'obsidian-nvim/obsidian.nvim',
+    'lewis6991/gitsigns.nvim',
 
     {
         "oflisback/obsidian-bridge.nvim",
