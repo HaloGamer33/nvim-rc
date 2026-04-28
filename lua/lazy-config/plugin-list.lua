@@ -16,7 +16,7 @@ Plugins = {
     'smartpde/telescope-recent-files', -- Obsidian companion plugin
     'obsidian-nvim/obsidian.nvim',
     'lewis6991/gitsigns.nvim',
-
+    'tpope/vim-fugitive',
     {
         "oflisback/obsidian-bridge.nvim",
         opts = {
