@@ -152,11 +152,6 @@ Plugins = {
             });
         end
     },
-    {
-        "SergioRibera/codeshot.nvim",
-    },      -- Create images from code 'screenshots'
-
-    { "mistricky/codesnap.nvim", build = "make" },
     -- Quickly create logging statements
     {
         "chrisgrieser/nvim-chainsaw",
