@@ -3,7 +3,7 @@ require("tokyonight").setup({
     -- or leave it empty to use the default settings
     style = "night", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
     light_style = "day", -- The theme is used when the background is set to light
-    transparent = true, -- Enable this to disable setting the background color
+    transparent = false, -- Enable this to disable setting the background color
     terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
     styles = {
         -- Style to be applied to different syntax groups
@@ -34,7 +34,7 @@ require("tokyonight").setup({
     on_highlights = function(highlights, colors) end,
 })
 vim.opt.background = "dark"
-vim.cmd.colorscheme "oxocarbon"
+vim.cmd.colorscheme "tokyonight"
 -- local colors = require('oxocarbon').oxocarbon -- or wherever the palette is
 -- for k, v in pairs(colors) do
 --     print(k .. ": " .. v)
