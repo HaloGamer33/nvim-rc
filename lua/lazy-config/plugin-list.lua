@@ -1,22 +1,22 @@
 Plugins = {
-    'alec-gibson/nvim-tetris',         -- Tetris
-    'barrett-ruth/live-server.nvim',   -- Live server
-    'chentoast/marks.nvim',            -- Better marks
-    'dstein64/vim-startuptime',        -- Startup Time
-    'Eandrju/cellular-automaton.nvim', -- Little visual games for the text buffer
-    'fladson/vim-kitty',               -- Syntax highlighting for kitty terminal config files
-    'folke/twilight.nvim',             -- Focus on cursor dimming everything else
-    'junegunn/vim-easy-align',         -- Align based on characters
-    'lambdalisue/suda.vim',            -- Write/Read as sudo
-    'LudoPinelli/comment-box.nvim',    -- Comment boxes
-    'mbbill/undotree',                 -- See undos in a pretty UI
-    'ThePrimeagen/vim-be-good',        -- ThePrimeagen goated game
-    'xiyaowong/transparent.nvim',      -- Transparent backgrounds
-    -- 'rktjmp/hotpot.nvim',              -- Fennel integration (be able to run ':Fnlfile my-file.fnl' on Oxocarbon)
-    'smartpde/telescope-recent-files', -- Obsidian companion plugin
-    'obsidian-nvim/obsidian.nvim',
-    'lewis6991/gitsigns.nvim',
-    'tpope/vim-fugitive',
+    "alec-gibson/nvim-tetris",         -- Tetris
+    "barrett-ruth/live-server.nvim",   -- Live server
+    "chentoast/marks.nvim",            -- Better marks
+    "dstein64/vim-startuptime",        -- Startup Time
+    "Eandrju/cellular-automaton.nvim", -- Little visual games for the text buffer
+    "fladson/vim-kitty",               -- Syntax highlighting for kitty terminal config files
+    "folke/twilight.nvim",             -- Focus on cursor dimming everything else
+    "junegunn/vim-easy-align",         -- Align based on characters
+    "lambdalisue/suda.vim",            -- Write/Read as sudo
+    "LudoPinelli/comment-box.nvim",    -- Comment boxes
+    "mbbill/undotree",                 -- See undos in a pretty UI
+    "ThePrimeagen/vim-be-good",        -- ThePrimeagen goated game
+    "xiyaowong/transparent.nvim",      -- Transparent backgrounds
+    -- "rktjmp/hotpot.nvim",              -- Fennel integration (be able to run ":Fnlfile my-file.fnl" on Oxocarbon)
+    "smartpde/telescope-recent-files", -- Obsidian companion plugin
+    "obsidian-nvim/obsidian.nvim",
+    "lewis6991/gitsigns.nvim",
+    "tpope/vim-fugitive",
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
@@ -88,8 +88,8 @@ Plugins = {
     },
     -- Markdown to PDF
     {
-        'arminveres/md-pdf.nvim',
-        branch = 'main', -- you can assume that main is somewhat stable until releases will be made
+        "arminveres/md-pdf.nvim",
+        branch = "main", -- you can assume that main is somewhat stable until releases will be made
         lazy = true,
         keys = {
             {
@@ -103,18 +103,18 @@ Plugins = {
     },
     -- Mark trailling whitespace
     {
-        'johnfrankmorgan/whitespace.nvim',
+        "johnfrankmorgan/whitespace.nvim",
         config = function()
-            require('whitespace-nvim').setup({
+            require("whitespace-nvim").setup({
                 -- configuration options and their defaults
 
                 -- `highlight` configures which highlight is used to display
                 -- trailing whitespace
-                highlight = 'DiffDelete',
+                highlight = "DiffDelete",
 
                 -- `ignored_filetypes` configures which filetypes to ignore when
                 -- displaying trailing whitespace
-                ignored_filetypes = { 'TelescopePrompt', 'Trouble', 'help', 'dashboard' },
+                ignored_filetypes = { "TelescopePrompt", "Trouble", "help", "dashboard" },
 
                 -- `ignore_terminal` configures whether to ignore terminal buffers
                 ignore_terminal = true,
@@ -125,7 +125,7 @@ Plugins = {
         })
 
         -- remove trailing whitespace with a keybinding
-        vim.keymap.set('n', '<Leader>t', require('whitespace-nvim').trim)
+        vim.keymap.set("n", "<Leader>t", require("whitespace-nvim").trim)
         end
     },
     -- Refactor tools brought to you by ThePrimeagen (creator) & TheLeoP (main contributor 2026-Jan-02)
@@ -140,13 +140,13 @@ Plugins = {
     -- },
     -- Find and Replace
     {
-        'MagicDuck/grug-far.nvim',
+        "MagicDuck/grug-far.nvim",
         -- Note (lazy loading): grug-far.lua defers all it's requires so it's lazy by default
         -- additional lazy config to defer loading is not really needed...
         config = function()
             -- optional setup call to override plugin options
             -- alternatively you can set options with vim.g.grug_far = { ... }
-            require('grug-far').setup({
+            require("grug-far").setup({
                 -- options, see Configuration section below
                 -- there are no required options atm
             });
@@ -160,83 +160,83 @@ Plugins = {
     },
     -- Adds commands to copy path of the current file
     {
-        'ohakutsu/socks-copypath.nvim',
+        "ohakutsu/socks-copypath.nvim",
         config = function()
-            require('socks-copypath').setup()
+            require("socks-copypath").setup()
         end,
     },
     -- When typing a symbol that has a pair it automatically puts the other side
     {
-        'windwp/nvim-autopairs',
-        event = 'InsertEnter',
+        "windwp/nvim-autopairs",
+        event = "InsertEnter",
         config = true
         -- use opts = {} for passing setup options
         -- this is equivalent to setup({}) function
     },
     -- This plugin makes it so lua LSP works on the Nvim configuration context
     {
-        'folke/lazydev.nvim',
-        ft = 'lua', -- only load on lua files
+        "folke/lazydev.nvim",
+        ft = "lua", -- only load on lua files
         opts = {
             library = {
                 -- See the configuration section for more details
                 -- Load luvit types when the `vim.uv` word is found
-                { path = '${3rd}/luv/library', words = { 'vim%.uv' } },
+                { path = "${3rd}/luv/library", words = { "vim%.uv" } },
             },
         },
     },
     -- Use bindings to move selected text
     {
-        'echasnovski/mini.move',
+        "echasnovski/mini.move",
         version = false,
     },
     -- Center text with the help of two buffers on the edges of the screen
     {
-        'shortcuts/no-neck-pain.nvim',
+        "shortcuts/no-neck-pain.nvim",
         config = function ()
-            require('no-neck-pain').setup({
+            require("no-neck-pain").setup({
                 width = 86
             })
         end
     },
     -- Have a prview of colors on top of the text (#FF0000)
     {
-        'catgoose/nvim-colorizer.lua',
-        -- event = 'BufReadPre',
+        "catgoose/nvim-colorizer.lua",
+        -- event = "BufReadPre",
         opts = { -- set to setup table
         },
         config = function ()
-            require('colorizer').setup()
+            require("colorizer").setup()
         end,
     },
     -- Startup dashboard for Neovim
     {
-        'goolord/alpha-nvim',
-        dependencies = { 'echasnovski/mini.icons' },
+        "goolord/alpha-nvim",
+        dependencies = { "echasnovski/mini.icons" },
     },
     -- Have lines that show indentation
     {
-        'lukas-reineke/indent-blankline.nvim',
-        main = 'ibl',
-        ---@module 'ibl'
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        ---@module "ibl"
         ---@type ibl.config
         opts = {},
     },
     -- Live Github-like markdown preview
     {
-        'iamcco/markdown-preview.nvim',
-        cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
-        build = 'cd app && yarn install',
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        build = "cd app && yarn install",
         init = function()
-            vim.g.mkdp_filetypes = { 'markdown' }
+            vim.g.mkdp_filetypes = { "markdown" }
         end,
-        ft = { 'markdown' },
+        ft = { "markdown" },
     },
     -- Harpoon, do I need to say more?
     {
-        'ThePrimeagen/harpoon',
-        branch = 'harpoon2',
-        dependencies = { 'nvim-lua/plenary.nvim' },
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        dependencies = { "nvim-lua/plenary.nvim" },
     },
     -- File explorer
     {
@@ -250,63 +250,63 @@ Plugins = {
         lazy = false, -- neo-tree will lazily load itself
     },
     {
-        'mks-h/treesitter-autoinstall.nvim',
+        "mks-h/treesitter-autoinstall.nvim",
     },
     -- The famous Treesitter
     {
-        'nvim-treesitter/nvim-treesitter',
+        "nvim-treesitter/nvim-treesitter",
         lazy = false,
         branch = "main",
     },
     -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
     -- ┃                           Lsp                           ┃
     -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-    'neovim/nvim-lspconfig',
-    'williamboman/mason.nvim',
-    'williamboman/mason-lspconfig.nvim',
+    "neovim/nvim-lspconfig",
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
 
     -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
     -- ┃                       Completion                        ┃
     -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-    'hrsh7th/nvim-cmp',
+    "hrsh7th/nvim-cmp",
     {
-        'L3MON4D3/LuaSnip',
-        version = 'v2.*',
+        "L3MON4D3/LuaSnip",
+        version = "v2.*",
         -- install jsregexp (optional!)
-        build = 'make install_jsregexp'
+        build = "make install_jsregexp"
     },
-    'hrsh7th/cmp-nvim-lsp',         -- Makes lsp's sources for completion
-    'saadparwaiz1/cmp_luasnip',     -- Makes luasnips sources for completion
-    'rafamadriz/friendly-snippets', -- Gives VSCode like Snipets in LuaSnip
+    "hrsh7th/cmp-nvim-lsp",         -- Makes lsp"s sources for completion
+    "saadparwaiz1/cmp_luasnip",     -- Makes luasnips sources for completion
+    "rafamadriz/friendly-snippets", -- Gives VSCode like Snipets in LuaSnip
 
     -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
     -- ┃                        Telescope                        ┃
     -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
     {
-        'nvim-telescope/telescope.nvim',
+        "nvim-telescope/telescope.nvim",
         dependencies = {
-            'nvim-lua/plenary.nvim',
-            'BurntSushi/ripgrep',
+            "nvim-lua/plenary.nvim",
+            "BurntSushi/ripgrep",
         }
     },
     {
-        'nvim-telescope/telescope-fzf-native.nvim',
-        build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release'
+        "nvim-telescope/telescope-fzf-native.nvim",
+        build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release"
     },
     -- Telescope file browser
     {
-        'nvim-telescope/telescope-file-browser.nvim',
-        dependencies = { 'nvim-telescope/telescope.nvim', 'nvim-lua/plenary.nvim' }
+        "nvim-telescope/telescope-file-browser.nvim",
+        dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
     },
 
     -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
     -- ┃                      Color schemes                      ┃
     -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-    'rebelot/kanagawa.nvim',
-    'folke/tokyonight.nvim',
-    'kepano/flexoki-neovim',
-    'EdenEast/nightfox.nvim',
-    'miikanissi/modus-themes.nvim',
-    'maxmx03/fluoromachine.nvim',
-    'nyoom-engineering/oxocarbon.nvim',
+    "rebelot/kanagawa.nvim",
+    "folke/tokyonight.nvim",
+    "kepano/flexoki-neovim",
+    "EdenEast/nightfox.nvim",
+    "miikanissi/modus-themes.nvim",
+    "maxmx03/fluoromachine.nvim",
+    "nyoom-engineering/oxocarbon.nvim",
 }

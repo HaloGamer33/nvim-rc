@@ -35,7 +35,7 @@ require("tokyonight").setup({
 })
 vim.opt.background = "dark"
 vim.cmd.colorscheme "tokyonight"
--- local colors = require('oxocarbon').oxocarbon -- or wherever the palette is
+-- local colors = require("oxocarbon").oxocarbon -- or wherever the palette is
 -- for k, v in pairs(colors) do
 --     print(k .. ": " .. v)
 -- end

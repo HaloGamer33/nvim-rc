@@ -6,7 +6,7 @@ local function ccbox() cb.ccbox(21) end
 local function albox() cb.albox(4) end
 local function line() cb.line(2) end
 
--- Runs '=' to give indentation
+-- Runs "=" to give indentation
 local function albox_indent()
     cb.albox(4)
     vim.api.nvim_feedkeys("=", "n", false)

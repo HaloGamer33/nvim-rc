@@ -42,13 +42,13 @@ vim.api.nvim_create_autocmd({"BufEnter"}, {
 -- Setup LuaSnip"s VSCode snipets
 require("luasnip.loaders.from_vscode").lazy_load()
 
-vim.api.nvim_create_autocmd('LspAttach', {
-    group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+vim.api.nvim_create_autocmd("LspAttach", {
+    group = vim.api.nvim_create_augroup("UserLspConfig", {}),
     callback = function(ev)
         -- Buffer local mappings.
         -- See `:help vim.lsp.*` for documentation on any of the below functions
         local opts = { buffer = ev.buf }
-        vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
-        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+        vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+        vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
     end,
 })

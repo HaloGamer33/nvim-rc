@@ -73,7 +73,7 @@ end, {})
 
 vim.api.nvim_create_user_command("InsertScriptImports", function()
     local text = ""
-    text = text .. 'source ~/scripts/lib/parse_args.bash\n'
+    text = text .. "source ~/scripts/lib/parse_args.bash\n"
     text = text .. 'eval "$(extract-file-info.bash $0 | rg \'^DESCRIPTION=\')"\n'
     text = text .. 'add_description "$DESCRIPTION"\n'
     text = text .. 'add_positional                         "EXAMPLE" "Description of the positional argument."\n'
@@ -81,7 +81,7 @@ vim.api.nvim_create_user_command("InsertScriptImports", function()
     text = text .. 'add_option            ""   "--verbose"           "Description of the option/flag."\n'
     text = text .. 'parse_args "$@"\n'
     text = text .. '[[ "$OPT_VERBOSE" == "true" ]] && LOG_LEVEL=DEBUG\n'
-    text = text .. 'source ~/scripts/lib/liblog.bash'
+    text = text .. "source ~/scripts/lib/liblog.bash"
     vim.api.nvim_paste(text, true, -1)
 end, {})
 

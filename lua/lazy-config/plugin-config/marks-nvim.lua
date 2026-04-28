@@ -1,4 +1,4 @@
-require'marks'.setup {
+require"marks".setup {
     -- whether to map keybinds or not. default true
     default_mappings = false,
     -- which builtin marks to show. default {}
@@ -33,16 +33,16 @@ require'marks'.setup {
         annotate = false,
     },
     mappings = {
-        set = "ms", -- 'Mark Set'
-        set_next = "ma", -- 'Mark Add'
+        set = "ms", -- "Mark Set"
+        set_next = "ma", -- "Mark Add"
 
-        delete = "mdm", -- 'Mark Delete Mark'
-        delete_line = "mdd", -- 'Mark Delete Line'
+        delete = "mdm", -- "Mark Delete Mark"
+        delete_line = "mdd", -- "Mark Delete Line"
 
-        next = "mn", -- 'Mark Next'
-        prev = "mp", -- 'Mark Previous'
+        next = "mn", -- "Mark Next"
+        prev = "mp", -- "Mark Previous"
     }
 }
 
 -- Unbind `m` so it doesn't create marks.
-vim.keymap.set({'n', 'v'}, 'm', '<Nop>', { noremap = true, silent = true })
+vim.keymap.set({"n", "v"}, "m", "<Nop>", { noremap = true, silent = true })
