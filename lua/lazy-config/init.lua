@@ -4,3 +4,4 @@ require("lazy-config.plugin-list")
 
 -- Each plugin's individual configuration
 require("lazy-config.plugin-config")
+require("lazy-config.plugin-mappings")

@@ -58,14 +58,14 @@ vim.keymap.set("n", "<leader>ff", function()
         hidden = true,
         -- no_ignore = true,
     })
-end, {})
+end, {desc = "Find file"})
 vim.keymap.set("n", "<leader>fg", function()
     builtin.live_grep({
         additional_args = {
             "--hidden"
         }
     })
-end, {})
-vim.keymap.set("n", "<leader>fb", extensions.file_browser.file_browser, {})
-vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
-vim.keymap.set("n", "<leader>fr", extensions.recent_files.pick, {})
+end, {desc = "Find word with grep"})
+vim.keymap.set("n", "<leader>fb", extensions.file_browser.file_browser, {desc = "File browser"})
+vim.keymap.set("n", "<leader>fh", builtin.help_tags, {desc = "Find help"})
+vim.keymap.set("n", "<leader>fr", extensions.recent_files.pick, {desc = "Find from recent files"})
