@@ -10,7 +10,7 @@ vim.api.nvim_create_user_command(
         if not success then
             -- Handle the error, e.g., display an error message
             vim.cmd.close() -- Close the tab if the help command fails
-            vim.api.nvim_err_writeln(err:sub(5))
+            vim.api.nvim_echo({{err:sub(5), "ErrorMsg"}}, true, {})
             return
         end
 
