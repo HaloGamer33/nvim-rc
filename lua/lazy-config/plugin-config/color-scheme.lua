@@ -23,7 +23,7 @@ require("tokyonight").setup({
     lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
 })
 vim.opt.background = "dark"
-vim.cmd.colorscheme "tokyonight"
+vim.cmd.colorscheme("tokyonight")
 -- local colors = require("oxocarbon").oxocarbon -- or wherever the palette is
 -- for k, v in pairs(colors) do
 --     print(k .. ": " .. v)
