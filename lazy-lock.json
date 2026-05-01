@@ -40,6 +40,7 @@
   "obsidian.nvim": { "branch": "main", "commit": "af9857e4993e0adddb897f09c2805b44a0d913ea" },
   "oxocarbon.nvim": { "branch": "main", "commit": "b1aca1d6843b3eed1c4500ad5b106646375bd726" },
   "plenary.nvim": { "branch": "master", "commit": "74b06c6c75e4eeb3108ec01852001636d85a932b" },
+  "refactoring.nvim": { "branch": "master", "commit": "bcd819d06d88fa78e14f49a40f91c849bdf866bf" },
   "ripgrep": { "branch": "master", "commit": "4519153e5e461527f4bca45b042fff45c4ec6fb9" },
   "socks-copypath.nvim": { "branch": "main", "commit": "0b74613cedffe565ab411408c44a7250a1b4d724" },
   "suda.vim": { "branch": "master", "commit": "c492741b4679b3cdd4d9e34138209784e061d916" },

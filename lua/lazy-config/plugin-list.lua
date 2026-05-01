@@ -14,10 +14,18 @@ Plugins = {
     "xiyaowong/transparent.nvim",      -- Transparent backgrounds
     -- "rktjmp/hotpot.nvim",              -- Fennel integration (be able to run ":Fnlfile my-file.fnl" on Oxocarbon)
     "smartpde/telescope-recent-files", -- Obsidian companion plugin
+    "johnfrankmorgan/whitespace.nvim", -- Mark and remove trailling whitespace
     "obsidian-nvim/obsidian.nvim",
     "lewis6991/gitsigns.nvim",
     "tpope/vim-fugitive",
-    { "folke/which-key.nvim", event = "VeryLazy", },
+    {
+        "folke/which-key.nvim",
+        opts = {
+            preset = "modern",
+            sort = { "local", "order", "group", "alphanum", "mod", "manual" },
+        },
+        event = "VeryLazy",
+    },
     { "folke/trouble.nvim", opts = {}, cmd = "Trouble", },
     {
         "oflisback/obsidian-bridge.nvim",
@@ -47,30 +55,6 @@ Plugins = {
         },
         ---@type md-pdf.config
         opts = {},
-    },
-    -- Mark trailling whitespace
-    {
-        "johnfrankmorgan/whitespace.nvim",
-        config = function()
-            require("whitespace-nvim").setup({
-                -- configuration options and their defaults
-
-                -- `highlight` configures which highlight is used to display
-                -- trailing whitespace
-                highlight = "DiffDelete",
-
-                -- `ignored_filetypes` configures which filetypes to ignore when
-                -- displaying trailing whitespace
-                ignored_filetypes = { "TelescopePrompt", "Trouble", "help", "dashboard" },
-
-                -- `ignore_terminal` configures whether to ignore terminal buffers
-                ignore_terminal = true,
-
-                -- `return_cursor` configures if cursor should return to previous
-                -- position after trimming whitespace
-                return_cursor = true,
-        })
-        end
     },
     -- Refactor tools brought to you by ThePrimeagen (creator) & TheLeoP (main contributor 2026-Jan-02)
     -- {
@@ -179,6 +163,12 @@ Plugins = {
     -- Harpoon, do I need to say more?
     {
         "ThePrimeagen/harpoon",
+        opts = {
+            settings = {
+                save_on_toggle = true,
+                sync_on_ui_close = true,
+            }
+        },
         branch = "harpoon2",
         dependencies = { "nvim-lua/plenary.nvim" },
     },
@@ -246,11 +236,11 @@ Plugins = {
     -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
     -- ┃                      Color schemes                      ┃
     -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-    "rebelot/kanagawa.nvim",
-    "folke/tokyonight.nvim",
-    "kepano/flexoki-neovim",
-    "EdenEast/nightfox.nvim",
-    "miikanissi/modus-themes.nvim",
-    "maxmx03/fluoromachine.nvim",
-    "nyoom-engineering/oxocarbon.nvim",
+    {"rebelot/kanagawa.nvim", lazy = true},
+    {"folke/tokyonight.nvim", lazy = true},
+    {"kepano/flexoki-neovim", lazy = true},
+    {"EdenEast/nightfox.nvim", lazy = true},
+    {"miikanissi/modus-themes.nvim", lazy = true},
+    {"maxmx03/fluoromachine.nvim", lazy = true},
+    {"nyoom-engineering/oxocarbon.nvim", lazy = true},
 }

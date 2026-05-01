@@ -1,7 +1,4 @@
-local builtin = require("telescope.builtin")
-local extensions = require("telescope").extensions
-
-telescope = require("telescope").setup {
+require("telescope").setup {
     defaults = {
         file_ignore_patterns = {
             ".git\\",
@@ -49,23 +46,3 @@ telescope = require("telescope").setup {
 -- load_extension, somewhere after setup function:
 require("telescope").load_extension("fzf")
 require("telescope").load_extension("recent_files")
-
--- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
--- ┃                    Setting key-binds                    ┃
--- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-vim.keymap.set("n", "<leader>ff", function()
-    builtin.find_files({
-        hidden = true,
-        -- no_ignore = true,
-    })
-end, {desc = "Find file"})
-vim.keymap.set("n", "<leader>fg", function()
-    builtin.live_grep({
-        additional_args = {
-            "--hidden"
-        }
-    })
-end, {desc = "Find word with grep"})
-vim.keymap.set("n", "<leader>fb", extensions.file_browser.file_browser, {desc = "File browser"})
-vim.keymap.set("n", "<leader>fh", builtin.help_tags, {desc = "Find help"})
-vim.keymap.set("n", "<leader>fr", extensions.recent_files.pick, {desc = "Find from recent files"})

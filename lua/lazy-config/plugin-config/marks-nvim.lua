@@ -43,6 +43,3 @@ require"marks".setup {
         prev = "mp", -- "Mark Previous"
     }
 }
-
--- Unbind `m` so it doesn't create marks.
-vim.keymap.set({"n", "v"}, "m", "<Nop>", { noremap = true, silent = true })
