@@ -1,0 +1,1 @@
+require("socks-copypath").setup()
