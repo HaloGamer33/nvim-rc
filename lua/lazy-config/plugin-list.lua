@@ -70,15 +70,17 @@ Plugins = {
     -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
     -- ┃                        Obsidian                         ┃
     -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-    "obsidian-nvim/obsidian.nvim",
+    {
+        "obsidian-nvim/obsidian.nvim",
+        cond = function()
+            return vim.fn.isdirectory(vim.fn.expand("~/halo-stash/2-Areas/Obsidian-Vault")) == 1
+        end,
+    },
     {
         "oflisback/obsidian-bridge.nvim",
         lazy         = true,
         event        = { "BufReadPre *.md", "BufNewFile *.md" },
         dependencies = { "nvim-lua/plenary.nvim" },
-        cond = function()
-            return vim.fn.isdirectory(vim.fn.expand("~/halo-stash/2-Areas/Obsidian-Vault")) == 1
-        end,
     },
 
     -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
