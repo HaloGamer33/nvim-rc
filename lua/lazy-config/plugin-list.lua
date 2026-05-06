@@ -70,12 +70,7 @@ Plugins = {
     -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
     -- ┃                        Obsidian                         ┃
     -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-    {
-        "obsidian-nvim/obsidian.nvim",
-        cond = function()
-            return vim.fn.isdirectory(vim.fn.expand("~/halo-stash/2-Areas/Obsidian-Vault")) == 1
-        end,
-    },
+    "obsidian-nvim/obsidian.nvim",
     {
         "oflisback/obsidian-bridge.nvim",
         lazy         = true,
