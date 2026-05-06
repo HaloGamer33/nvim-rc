@@ -2,7 +2,14 @@
 set -e
 
 sudo pacman -Syu --noconfirm
-sudo pacman -S --needed git neovim make yarn cmake gcc --noconfirm
+sudo pacman -S --needed --noconfirm \
+    git \
+    neovim \
+    make \
+    yarn \
+    cmake \
+    gcc \
+    tree-sitter-cli \
 
 sudo localectl set-locale LANG=en_US.UTF-8
 
