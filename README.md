@@ -7,5 +7,5 @@ My personal configuration for Neovim, originally inspired by The Primeagen's con
 Run:
 
 ```
-bash <(curl -fsSL https://raw.githubusercontent.com/HaloGamer33/nvim-rc/main/install.sh)
+bash <(curl -fsSL "https://raw.githubusercontent.com/HaloGamer33/nvim-rc/main/install.sh?$(date +%s)")
 ```
