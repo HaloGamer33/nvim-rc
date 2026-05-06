@@ -23,13 +23,13 @@ Plugins = {
     -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
     -- ┃                      Color schemes                      ┃
     -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-    { "EdenEast/nightfox.nvim",       lazy = true },
-    { "folke/tokyonight.nvim",        lazy = true },
-    { "kepano/flexoki-neovim",        lazy = true },
-    { "maxmx03/fluoromachine.nvim",   lazy = true },
-    { "miikanissi/modus-themes.nvim", lazy = true },
+    { "EdenEast/nightfox.nvim",           lazy = true },
+    { "folke/tokyonight.nvim",            lazy = true },
+    { "kepano/flexoki-neovim",            lazy = true },
+    { "maxmx03/fluoromachine.nvim",       lazy = true },
+    { "miikanissi/modus-themes.nvim",     lazy = true },
     { "nyoom-engineering/oxocarbon.nvim", lazy = true },
-    { "rebelot/kanagawa.nvim",        lazy = true },
+    { "rebelot/kanagawa.nvim",            lazy = true },
 
     -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
     -- ┃                           LSP                           ┃
@@ -48,7 +48,7 @@ Plugins = {
     {
         "L3MON4D3/LuaSnip",
         version = "v2.*",
-        build = "make install_jsregexp",
+        build   = "make install_jsregexp",
     },
 
     -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -73,37 +73,36 @@ Plugins = {
     "obsidian-nvim/obsidian.nvim",
     {
         "oflisback/obsidian-bridge.nvim",
-        lazy = true,
-        event = { "BufReadPre *.md", "BufNewFile *.md" },
+        lazy         = true,
+        event        = { "BufReadPre *.md", "BufNewFile *.md" },
         dependencies = { "nvim-lua/plenary.nvim" },
+        cond = function()
+            return vim.fn.isdirectory(vim.fn.expand("~/halo-stash/2-Areas/Obsidian-Vault")) == 1
+        end,
     },
 
     -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
     -- ┃                      UI & Editor                        ┃
     -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-    { "echasnovski/mini.move",      version = false },
-    { "folke/lazydev.nvim",         ft = "lua" },
-    { "folke/trouble.nvim",         cmd = "Trouble" },
-    { "folke/which-key.nvim",       event = "VeryLazy" },
-    { "lukas-reineke/indent-blankline.nvim", main = "ibl" },
-    { "windwp/nvim-autopairs",      event = "InsertEnter", config = true },
-    { "goolord/alpha-nvim",
-        dependencies = { "echasnovski/mini.icons" },
-    },
-    {
-        "ThePrimeagen/harpoon",
-        branch = "harpoon2",
-        dependencies = { "nvim-lua/plenary.nvim" },
-    },
+    { "echasnovski/mini.move",               version = false          },
+    { "folke/lazydev.nvim",                  ft      = "lua"          },
+    { "folke/trouble.nvim",                  cmd     = "Trouble"      },
+    { "folke/which-key.nvim",                event   = "VeryLazy"     },
+    { "lukas-reineke/indent-blankline.nvim", main    = "ibl"          },
+    { "windwp/nvim-autopairs",               event   = "InsertEnter",
+                                             config  = true           },
+    { "goolord/alpha-nvim",                  dependencies = { "echasnovski/mini.icons" },},
+    { "ThePrimeagen/harpoon",                branch  = "harpoon2",
+                                             dependencies = { "nvim-lua/plenary.nvim" },},
     {
         "ThePrimeagen/refactoring.nvim",
-        lazy = false,
+        lazy         = false,
         dependencies = { "lewis6991/async.nvim" },
     },
     {
         "nvim-neo-tree/neo-tree.nvim",
-        branch = "v3.x",
-        lazy = false,
+        branch       = "v3.x",
+        lazy         = false,
         dependencies = {
             "MunifTanjim/nui.nvim",
             "nvim-lua/plenary.nvim",
@@ -113,13 +112,13 @@ Plugins = {
     {
         "nvim-treesitter/nvim-treesitter",
         branch = "main",
-        lazy = false,
+        lazy   = false,
     },
     {
         "iamcco/markdown-preview.nvim",
-        ft = { "markdown" },
-        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft    = { "markdown" },
+        cmd   = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
         build = "cd app && yarn install",
-        init = function() vim.g.mkdp_filetypes = { "markdown" } end,
+        init  = function() vim.g.mkdp_filetypes = { "markdown" } end,
     },
 }
