@@ -10,6 +10,10 @@ sudo pacman -S --needed --noconfirm \
     cmake \
     gcc \
     tree-sitter-cli \
+    luarocks \
+    wget \
+    ripgrep \
+    fd \
 
 sudo localectl set-locale LANG=en_US.UTF-8
 
