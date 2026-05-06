@@ -10,8 +10,9 @@ local function load_dir(dir)
 
     -- Get all .lua files in that directory
     local files = vim.fn.glob(path .. "/*.lua", false, true)
+    local vault_exists = vim.fn.isdirectory(vim.fn.expand("~/halo-stash/2-Areas/Obsidian-         Vault")) == 1
 
-    if vim.fn.isdirectory(vim.fn.expand("~/halo-stash/2-Areas/Obsidian-Vault")) == 1 then
+    if not vault_exists then
         files = vim.tbl_filter(function(f)
             return not f:find("obsidian%-nvim%.lua$")
         end, files)
