@@ -1,5 +1,6 @@
 -- Imports
 local set = vim.keymap.set
+local helpers = require("base-config.helper-functions")
 
 -- Settings
 vim.g.mapleader = " " -- Mapping leader to space.
@@ -27,3 +28,12 @@ set("n", "<M-C-J>", "gT", {desc = "Previous Tab"}) -- Alt + Ctrl + J -> Previous
 -- Command line mappings
 set("c", "<C-P>", "<Up>")
 set("c", "<C-N>", "<Down>")
+
+-- Comment Box mappings
+set("n", "<leader>cbl", function()
+    helpers.ifBufModifiable(function() vim.cmd("CBllline 9") end)
+end, {desc = "CommandBox Line"})
+
+set("n", "<leader>cbb", function()
+    helpers.ifBufModifiable(function() vim.cmd("CBlcbox 3") end)
+end, {desc = "CommandBox Box"})
