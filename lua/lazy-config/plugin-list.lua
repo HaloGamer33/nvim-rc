@@ -43,15 +43,6 @@ Plugins = {
     -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
     -- ┃                        Completion                       ┃
     -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-    "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/nvim-cmp",
-    "rafamadriz/friendly-snippets",
-    "saadparwaiz1/cmp_luasnip",
-    {
-        "L3MON4D3/LuaSnip",
-        version = "v2.*",
-        build   = "make install_jsregexp",
-    },
 
     -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
     -- ┃                        Telescope                        ┃
