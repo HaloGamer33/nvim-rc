@@ -20,6 +20,7 @@ Plugins = {
     "ThePrimeagen/vim-be-good",          -- ThePrimeagen goated game
     "xiyaowong/transparent.nvim",        -- Transparent backgrounds
     "stevearc/conform.nvim",
+    "nxhung2304/lastplace.nvim",
 
     -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
     -- ┃                      Color schemes                      ┃
