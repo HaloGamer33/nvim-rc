@@ -29,7 +29,7 @@ vim.api.nvim_create_user_command(
     {nargs = 0}
 )
 
-vim.api.nvim_create_user_command("InsertPreface", function(opts)
+vim.api.nvim_create_user_command("PrefaceGenerator", function(opts)
     local filepath = vim.fn.expand("%:p")
     local arguments = {}
     table.insert(arguments, "preface-generator.bash")
@@ -87,7 +87,7 @@ end, {})
 
 vim.api.nvim_create_user_command("ScriptTemplate", function()
     vim.api.nvim_paste("#!/usr/bin/env bash\n\n", true, -1)
-    vim.api.nvim_cmd(vim.api.nvim_parse_cmd("InsertPreface", {}), {output = false})
+    vim.api.nvim_cmd(vim.api.nvim_parse_cmd("PrefaceGenerator", {}), {output = false})
     vim.api.nvim_command("normal Go")
     vim.api.nvim_cmd(vim.api.nvim_parse_cmd("InsertScriptSections", {}), {output = false})
     vim.api.nvim_command("normal 6k")
