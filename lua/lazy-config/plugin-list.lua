@@ -19,6 +19,7 @@ Plugins = {
     "smartpde/telescope-recent-files",   -- Obsidian companion plugin
     "ThePrimeagen/vim-be-good",          -- ThePrimeagen goated game
     "xiyaowong/transparent.nvim",        -- Transparent backgrounds
+    "stevearc/conform.nvim",
 
     -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
     -- ┃                      Color schemes                      ┃
