@@ -13,16 +13,3 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 vim.lsp.config("*", {
     capabilities = capabilities
 })
-
-vim.lsp.config.ltex_plus = {
-    on_attach = function(client, bufnr)
-        require("ltex_extra").setup {
-        }
-    end,
-    settings = {
-        ltex = {
-            enabled = true,
-            language = "en-US",
-        }
-    }
-}
