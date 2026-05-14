@@ -18,12 +18,20 @@ vim.o.fileformat = "unix"  -- Always use unix file format (end line character) i
 vim.o.linebreak = true     -- Wrap on words and not on charactes when "set wrap"
 vim.o.wrapscan = false     -- Don't wrap the end of the document when searching
 vim.o.colorcolumn = "80"   -- Column so that I keep my lines short
+vim.o.updatetime = 750
 vim.opt.iskeyword:remove("_")
 vim.opt.fillchars = { eob = " " }
 
 vim.o.formatoptions = "t,c,r,o,q,n,1,],j,p" -- See: Help formatoptions
 
 cmd("language en_US.utf8")
+
+-- Show full errors & warnings when cursor stays for amount of 'updatetime'.
+vim.api.nvim_create_autocmd({"CursorHold", "CursorHoldI"}, {
+    callback = function()
+        vim.diagnostic.open_float(nil, { focus=false })
+    end,
+})
 
 -- Highlighting yanked selection.
 vim.api.nvim_create_autocmd("TextYankPost", {
