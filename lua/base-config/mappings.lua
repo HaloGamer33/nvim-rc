@@ -30,10 +30,10 @@ set("c", "<C-P>", "<Up>")
 set("c", "<C-N>", "<Down>")
 
 -- Comment Box mappings
-set("n", "<leader>cbl", function()
+set({"n", "v"}, "<leader>cbl", function()
     helpers.ifBufModifiable(function() vim.cmd("CBllline 9") end)
 end, {desc = "CommandBox Line"})
 
-set("n", "<leader>cbb", function()
+set({"n", "v"}, "<leader>cbb", function()
     helpers.ifBufModifiable(function() vim.cmd("CBlcbox 3") end)
 end, {desc = "CommandBox Box"})
