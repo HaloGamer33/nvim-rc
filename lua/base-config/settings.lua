@@ -26,6 +26,17 @@ vim.o.formatoptions = "t,c,r,o,q,n,1,],j,p" -- See: Help formatoptions
 
 cmd("language en_US.utf8")
 
+vim.diagnostic.config({
+    -- virtual_text = {
+    --     prefix = "●", -- or "■", "▎", "✗", etc.
+    --     source = "if_many", -- show source if multiple LSPs
+    -- },
+    signs = true,
+    underline = true,
+    update_in_insert = false,
+    severity_sort = true,
+})
+
 -- Show full errors & warnings when cursor stays for amount of 'updatetime'.
 vim.api.nvim_create_autocmd({"CursorHold", "CursorHoldI"}, {
     callback = function()
