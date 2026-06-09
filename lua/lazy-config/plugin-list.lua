@@ -32,6 +32,8 @@ Plugins = {
     { "miikanissi/modus-themes.nvim",     lazy = true },
     { "nyoom-engineering/oxocarbon.nvim", lazy = true },
     { "rebelot/kanagawa.nvim",            lazy = true },
+    { "kepano/flexoki",                   lazy = true },
+    { "rose-pine/nvim",                   lazy = true },
 
     -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
     -- ┃                           LSP                           ┃
