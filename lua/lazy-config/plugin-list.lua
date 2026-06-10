@@ -1,7 +1,6 @@
 Plugins = {
     "alec-gibson/nvim-tetris",           -- Tetris
     "barrett-ruth/live-server.nvim",     -- Live server
-    "catgoose/nvim-colorizer.lua",       -- Have a prview of colors on top of the text (#FF0000)
     "chentoast/marks.nvim",              -- Better marks
     "dstein64/vim-startuptime",          -- Startup Time
     "Eandrju/cellular-automaton.nvim",   -- Little visual games for the text buffer
@@ -134,6 +133,14 @@ Plugins = {
     { "goolord/alpha-nvim",                  dependencies = { "echasnovski/mini.icons" },},
     { "ThePrimeagen/harpoon",                branch  = "harpoon2",
                                              dependencies = { "nvim-lua/plenary.nvim" },},
+    -- lazy.nvim
+    {
+        "catgoose/nvim-colorizer.lua",
+        event = "BufReadPre",
+        opts = {
+            options = { parsers = { css = true } },
+        },
+    },
     {
         "ThePrimeagen/refactoring.nvim",
         lazy         = false,
